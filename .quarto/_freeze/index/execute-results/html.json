@@ -1,0 +1,15 @@
+{
+  "hash": "ab3dc77713fc6e36377c29768e563c47",
+  "result": {
+    "engine": "knitr",
+    "markdown": "# Math 135 Applied Multivariable Calculus I {.unnumbered}\n\n<!--\n<a href=\"https://www.flaticon.com/free-icons/calculus\" title=\"calculus icons\">Calculus icons created by ICs Icons - Flaticon</a>\n-->\n\n\n\n\n::: {.cell}\n\n:::\n\n::: {.cell layout-align=\"center\"}\n\n:::\n\n\n\n\n**Macalester College**\\\n**Updated: Spring 2025**\n\n![](images/cover.png)\n\n[image source](https://commons.wikimedia.org/wiki/File:Data_analytics_WP20.png)\n\n<br> <br>\n\nThis site provides in-class activities MATH 135 Applied Multivariable Calculus I in the [MSCS Department](https://macalester.edu/mscs) at [Macalester College](https://macalester.edu). If you happen upon this manual and want to adapt the material to your own course, please properly attribute this work.\n\nThe content here was made by [Andrew Beveridge](https://mathbeveridge.github.io) \nand draws upon:\n\n* Material prepared by [Kristin Heysse](https://www.macalester.edu/~kheysse/) and [Lori Ziegelmeier](https://www.loriziegelmeier.com/) \n* The open textbook [Applied Calculus](http://www.opentextbookstore.com/details.php?id=14) by Shana Calaway, Dale Hoffman, and David Lippman.\n\n\n\n<br> <br> <br>\n\n<a rel=\"license\" href=\"http://creativecommons.org/licenses/by-nc-sa/4.0/\"><img src=\"https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png\" alt=\"Creative Commons License\" style=\"border-width:0\"/></a><br />This work is licensed under a <a rel=\"license\" href=\"http://creativecommons.org/licenses/by-nc-sa/4.0/\">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

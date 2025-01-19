@@ -1,0 +1,116 @@
+{
+  "index.qmd": {
+    "index.html": "eb8e637f"
+  },
+  "intro.qmd": {
+    "intro.html": "2c28c755"
+  },
+  "summary.qmd": {
+    "summary.html": "a237b452"
+  },
+  "references.qmd": {
+    "references.html": "c85f07bd"
+  },
+  "learning-goals.qmd": {
+    "learning-goals.html": "53a8f012"
+  },
+  "activities/1A-functions.qmd": {
+    "1A-functions.html": "bf69e543"
+  },
+  "activities/1A-Functions.qmd": {
+    "1A-Functions.html": "928294f5"
+  },
+  "activities/1B-LinearFunctions.qmd": {
+    "1B-LinearFunctions.html": "2c08a09d"
+  },
+  "activities/1C-RateOfChange.qmd": {
+    "1C-RateOfChange.html": "0e35bed7"
+  },
+  "activities/1D-ExpLog.qmd": {
+    "1D-ExpLog.html": "bbd6e694"
+  },
+  "activities/1E-Power.qmd": {
+    "1E-Power.html": "b6f70467"
+  },
+  "activities/1F-Periodic.qmd": {
+    "1F-Periodic.html": "4baaed42"
+  },
+  "activities/1G-Multivariable.qmd": {
+    "1G-Multivariable.html": "785c0fa4"
+  },
+  "activities/1Z-Summary.qmd": {
+    "1Z-Summary.html": "4cd470fb"
+  },
+  "activities/2A-DerivIntro.qmd": {
+    "2A-DerivIntro.html": "d06d3ac9"
+  },
+  "activities/2B-SecondDeriv.qmd": {
+    "2B-SecondDeriv.html": "021fbadb"
+  },
+  "activities/2C-PartialDeriv.qmd": {
+    "2C-PartialDeriv.html": "3552d803"
+  },
+  "activities/2D-Linearization.qmd": {
+    "2D-Linearization.html": "047b0a78"
+  },
+  "activities/2Z-Summary.qmd": {
+    "2Z-Summary.html": "467d49ae"
+  },
+  "activities/3A-Differentiation.qmd": {
+    "3A-Differentiation.html": "592d4d54"
+  },
+  "activities/3B-Chainrule.qmd": {
+    "3B-Chainrule.html": "3570c1ed"
+  },
+  "activities/3C-PartialGradient.qmd": {
+    "3C-PartialGradient.html": "7592eaff"
+  },
+  "activities/3Z-Summary.qmd": {
+    "3Z-Summary.html": "513d3a83"
+  },
+  "activities/4A-Optimization1D.qmd": {
+    "4A-Optimization1D.html": "ef6d8826"
+  },
+  "activities/4B-Optimization2D.qmd": {
+    "4B-Optimization2D.html": "43c93817"
+  },
+  "activities/4C-GradientSearch.qmd": {
+    "4C-GradientSearch.html": "4059aa40"
+  },
+  "activities/4D-ConstrainedOptimization.qmd": {
+    "4D-ConstrainedOptimization.html": "6998e5a2"
+  },
+  "activities/4Z-Summary.qmd": {
+    "4Z-Summary.html": "ddf74bb3"
+  },
+  "activities/5A-AccumulatingChange.qmd": {
+    "5A-AccumulatingChange.html": "3a9af62f"
+  },
+  "activities/5B-DefiniteIntegral.qmd": {
+    "5B-DefiniteIntegral.html": "9f8ab56a"
+  },
+  "activities/5C-IndefiniteIntegral.qmd": {
+    "5C-IndefiniteIntegral.html": "8cf83847"
+  },
+  "activities/5Z-Summary.qmd": {
+    "5Z-Summary.html": "1c3e4f05"
+  },
+  "activities/6A-DiffEq.qmd": {
+    "6A-DiffEq.html": "1e205da2"
+  },
+  "activities/6B-PopModels.qmd": {
+    "6B-PopModels.html": "5d3e6a13"
+  },
+  "activities/6C-EulersMethod.qmd": {
+    "6C-EulersMethod.html": "bf4075ff"
+  },
+  "activities/6D-SlopeFields.qmd": {
+    "6D-SlopeFields.html": "3a93370e"
+  },
+  "activities/6E-SpreadOfDisease.qmd": {
+    "6E-SpreadOfDisease.html": "4076ca46"
+  },
+  "activities/6Z-Summary.qmd": {
+    "6Z-Summary.html": "922a713e"
+  }
+}

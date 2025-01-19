@@ -1,0 +1,1 @@
+Sitemap: https://mac-stat.github.io/COMPSTAT112/sitemap.xml
