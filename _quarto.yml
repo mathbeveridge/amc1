@@ -13,10 +13,13 @@ book:
     search: true
   chapters:
     - index.qmd
-    - part: "Course Logistics"
+    - part: "Course Resources"
       chapters:
       #- schedule.md
-      - learning-goals.qmd
+      - logistics/LearningGoals.qmd
+      - logistics/R_Primer.qmd
+      - logistics/R_QuickRef.qmd
+      - logistics/R_Intro.qmd
       #- homework.qmd
       #- syllabus.qmd
     - part: "Functions"

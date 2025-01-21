@@ -112,5 +112,17 @@
   },
   "activities/6Z-Summary.qmd": {
     "6Z-Summary.html": "922a713e"
+  },
+  "logistics/LearningGoals.qmd": {
+    "LearningGoals.html": "ffa9da9b"
+  },
+  "logistics/R_QuickRef.qmd": {
+    "R_QuickRef.html": "1bd3aaa5"
+  },
+  "logistics/R_Primer.qmd": {
+    "R_Primer.html": "2a110086"
+  },
+  "logistics/R_Intro.qmd": {
+    "R_Intro.html": "3c353039"
   }
 }

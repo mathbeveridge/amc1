@@ -1,0 +1,22 @@
+# Learning Goals {.unnumbered}
+
+The goal of this course is for you to gain confidence in using mathematics and computation to model dynamic systems and interpret your results.
+
+**Learning Objectives**
+
+-   **Describe** interesting quantities with functions, being sure to pick the right function for the job.
+-   **Quantify** how those quantities change using calculus techniques, and
+-   **Interpret** how that change can tell us about that variable and the system as a whole.
+-   **Explore** how to apply this understanding of change can help us solve more applied problems from various quantitative fields.
+-   **Apply** the computational power of software (RStudio and Desmos) to more fully investigate questions that may be hard to solve by hand.
+-   **Work** productively in a collaborative group setting with a variety of your peers.
+-   **Cultivate** a “try something” mentality and classroom, where we are unafraid to dive into something new and support others in their exploration
+
+**Collaborative Learning**
+
+Our classroom is a collaborative work space. Being a good colleague and helpful group member are essential.
+
+-   Understand and demonstrate characteristics of effective collaboration (team roles, interpersonal communication, self-reflection, awareness of social dynamics, advocating for yourself and others).
+-   Develop a common purpose and agreement on goals.
+-   Be able to contribute questions or concerns in a respectful way.
+-   Share and contribute to the group's learning in an equitable manner.

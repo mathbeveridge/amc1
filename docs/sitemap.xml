@@ -2,15 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://mac-stat.github.io/COMPSTAT112/index.html</loc>
-    <lastmod>2025-01-10T17:03:24.370Z</lastmod>
+    <lastmod>2025-01-21T02:11:24.434Z</lastmod>
   </url>
   <url>
-    <loc>https://mac-stat.github.io/COMPSTAT112/learning-goals.html</loc>
-    <lastmod>2025-01-10T14:14:31.539Z</lastmod>
+    <loc>https://mac-stat.github.io/COMPSTAT112/logistics/LearningGoals.html</loc>
+    <lastmod>2025-01-21T02:14:21.577Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mac-stat.github.io/COMPSTAT112/logistics/R_Primer.html</loc>
+    <lastmod>2025-01-21T01:56:44.394Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mac-stat.github.io/COMPSTAT112/logistics/R_QuickRef.html</loc>
+    <lastmod>2025-01-21T02:04:45.967Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mac-stat.github.io/COMPSTAT112/logistics/R_Intro.html</loc>
+    <lastmod>2025-01-21T02:05:42.845Z</lastmod>
   </url>
   <url>
     <loc>https://mac-stat.github.io/COMPSTAT112/activities/1A-Functions.html</loc>
-    <lastmod>2025-01-10T17:40:07.330Z</lastmod>
+    <lastmod>2025-01-21T02:11:36.420Z</lastmod>
   </url>
   <url>
     <loc>https://mac-stat.github.io/COMPSTAT112/activities/1B-LinearFunctions.html</loc>
@@ -102,11 +114,11 @@
   </url>
   <url>
     <loc>https://mac-stat.github.io/COMPSTAT112/activities/5B-DefiniteIntegral.html</loc>
-    <lastmod>2025-01-10T17:47:09.090Z</lastmod>
+    <lastmod>2025-01-21T01:38:43.088Z</lastmod>
   </url>
   <url>
     <loc>https://mac-stat.github.io/COMPSTAT112/activities/5C-IndefiniteIntegral.html</loc>
-    <lastmod>2025-01-10T17:47:52.850Z</lastmod>
+    <lastmod>2025-01-21T01:38:52.145Z</lastmod>
   </url>
   <url>
     <loc>https://mac-stat.github.io/COMPSTAT112/activities/5Z-Summary.html</loc>

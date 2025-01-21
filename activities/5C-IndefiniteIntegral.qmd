@@ -1,5 +1,4 @@
-# 6.C The Indefinite Integral
-
+# The Indefinite Integral
 
 ```{r, echo=FALSE, results="hide", warning=FALSE, message=FALSE}
 # Load packages
@@ -11,9 +10,7 @@ library(mosaicCalc)
 ## Rundown
 
 ::: {.callout-note title="Learning goals"}
-
-- Coming Soon
-
+-   Coming Soon
 :::
 
 ### Rules of Integration
@@ -136,7 +133,6 @@ The **rate** $r(t)$ at which people become zombies during the inevitable zombie 
 1.  Write the number of infected people $I(T)$ as an indefinite integral.
 2.  How many total people get infected by time $T$ where $T$ is a very large number?
 
-
 \
 \
 \
@@ -147,8 +143,6 @@ The **rate** $r(t)$ at which people become zombies during the inevitable zombie 
 <details>
 
 <summary>Click for Solutions</summary>
-
-
 
 ### Indefinite Integral Practice
 
@@ -267,5 +261,5 @@ The **rate** $r(t)$ at which people become zombies during the inevitable zombie 
 2.  We have $$
     \int_0^T 1000 e^{-0.5t} \, dt = \left. \frac{1000}{-0.5} e^{-0.5t} \right|_0^T = - \frac{1000}{0.5} e^{-0.5 T} + \frac{1000}{0.5} e^{0} = 2000 \left( 1 - \frac{1}{e^{0.5 T}}\right).
     $$ For very large $T$ the second term is basically 0. So we have 2000 zombies by the end of the outbreak. Gosh, that's not too bad!
-    
+
 </details>

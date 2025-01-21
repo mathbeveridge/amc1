@@ -1,4 +1,4 @@
-# 6.B The Definite Integral
+# The Definite Integral
 
 ```{r, echo=FALSE, results="hide", warning=FALSE, message=FALSE}
 # Load packages
@@ -10,9 +10,7 @@ library(mosaicCalc)
 ## Rundown
 
 ::: {.callout-note title="Learning goals"}
-
-- Coming Soon
-
+-   Coming Soon
 :::
 
 ## Approximating the Derivative
@@ -104,8 +102,6 @@ slice_plot(sin(x)~x, domain(x=0:2*pi)) %>%
 <details>
 
 <summary>Click for Solutions</summary>
-
-
 
 ### Drive My Car
 
@@ -254,4 +250,3 @@ So our estimate of the area is
 ```
 
 </details>
-

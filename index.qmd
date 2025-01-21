@@ -1,8 +1,10 @@
-# Math 135 Applied Multivariable Calculus I {.unnumbered}
+# Math 135 AMC I {.unnumbered}
 
+```{=html}
 <!--
 <a href="https://www.flaticon.com/free-icons/calculus" title="calculus icons">Calculus icons created by ICs Icons - Flaticon</a>
 -->
+```
 
 ```{r setup, echo = FALSE, warning = FALSE}
 knitr::opts_chunk$set(collapse = TRUE, 
@@ -55,13 +57,10 @@ conflicts_prefer(base::mean)
 
 This site provides in-class activities MATH 135 Applied Multivariable Calculus I in the [MSCS Department](https://macalester.edu/mscs) at [Macalester College](https://macalester.edu). If you happen upon this manual and want to adapt the material to your own course, please properly attribute this work.
 
-The content here was made by [Andrew Beveridge](https://mathbeveridge.github.io) 
-and draws upon:
+The content here was made by [Andrew Beveridge](https://mathbeveridge.github.io) and draws upon:
 
-* Material prepared by [Kristin Heysse](https://www.macalester.edu/~kheysse/) and [Lori Ziegelmeier](https://www.loriziegelmeier.com/) 
-* The open textbook [Applied Calculus](http://www.opentextbookstore.com/details.php?id=14) by Shana Calaway, Dale Hoffman, and David Lippman.
-
-
+-   Material prepared by [Kristin Heysse](https://www.macalester.edu/~kheysse/) and [Lori Ziegelmeier](https://www.loriziegelmeier.com/)
+-   The open textbook [Applied Calculus](http://www.opentextbookstore.com/details.php?id=14) by Shana Calaway, Dale Hoffman, and David Lippman.
 
 <br> <br> <br>
 
