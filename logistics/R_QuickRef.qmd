@@ -1,6 +1,6 @@
 # RStudio Quick Reference {.unnumbered}
 
-## Loading Mosaic and MosaicCalc Packages
+## Loading Mosaic, MosaicCore and MosaicCalc Packages
 
 Run the following code block to load the `mosaic`, `mosaicCore` and `mosaicCalc` libraries
 
@@ -28,7 +28,7 @@ Without fail, you will run into problems. Sometimes RStudio will give you helpfu
 
 -   *... number of items to replace is not a multiple of replacement length ...* Your input variable doesn't match the name variable you used in the output when you called `makeFun`. Maybe you used `x` on one side of the tilde `~` and `t` on the other side?
 
--   *Argument "name" is missing, with no default...* You're probably trying to use `makeFun` without loading the `mosaic` package, or to take a derivative or antiderivative without the `mosaicCalc package`. See the "Loading Mosaic and MosaicCalc Packages" section at the top of this page for how to fix this.
+-   *Argument "name" is missing, with no default...* You're probably trying to use `makeFun` without loading the `mosaic` package, or to plot a vector field without the `mosaicCalc package`. See the "Loading Mosaic, MosaicCore and MosaicCalc Packages" section at the top of this page for how to fix this.
 
 -   *I can't find my data!* You may have fetched it but did not give it a name. Go back to your fetch command and make sure you have assigned it a variable.
 
@@ -182,6 +182,7 @@ slice_plot(P(t) ~ t, domain(t=0:50), color='orange')
 
 ```
 
+<!--
 ### Fitting a Function to Data
 
 The `fitModel` command is part of the mosaic package. Here is how you would fit a linear model to data
@@ -283,6 +284,7 @@ gf_point(temp ~ month, data=utilitydata) %>%
 ```
 
 That looks much better!
+-->
 
 ### Plotting Surfaces in 3D
 

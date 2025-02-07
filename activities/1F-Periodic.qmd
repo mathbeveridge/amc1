@@ -121,9 +121,55 @@ There are lots of period functions. How about:
 
 ### Find a periodic formula
 
-1.  The function is $\cos\left(3x \right)+1$
+1.  Here's the steps to find the function.
 
-2.  The function is $-6 \sin\left(\frac{2\pi}{3} \right)$
+- The max value is 3 and the min value is 1. So we have
+$$
+A = \frac{\max - \min}{2} = \frac{3-1}{2} = \frac{2}{2}=1
+$$
+and
+$$
+C = \frac{\max + \min}{2} = \frac{3+1}{2} = \frac{4}{2} = 2. 
+$$
+- The easiest way to find the period is to look for identifiable points. We reach the minimum at $x=-\pi$ and $x = \pi$, and we go through 3 cycles between them. So
+$$
+T = \frac{\pi - (-\pi)}{3} = \frac{2 \pi}{3}
+$$
+which means that
+$$
+\omega = \frac{2\pi}{2 \pi/3} = 3.
+$$
+
+- Now we need to choose a function from $\sin$, $-\sin$, $\cos$ and $\cos$. Hopefully we can pick one that will let us take $\phi=0$. Looking at the function, we see that it reaches a maximum at $x=0$, which is compatible with $\cos$.
+
+Therefore, the function is 
+$$
+\cos\left(3x \right)+2
+$$
+
+2.  Here's the steps to find the function.
+
+- The center line is 0, so $C=0$.
+- The max value is 7 and the min value is -7. So we have
+$$
+A = \frac{\max - \min}{2} = \frac{7 - (-7)}{2} = \frac{14}{2}=7.
+$$
+
+- The easiest way to find the period is to look for identifiable points. We begin a cycle at at $x=0$ and start the next new cycle at $x = 3$. So
+$$
+T = 3 - 0 = 3
+$$
+which means that
+$$
+\omega = \frac{2\pi}{3}.
+$$
+
+- Now we need to choose a function from $\sin$, $-\sin$, $\cos$ and $\cos$. Hopefully we can pick one that will let us take $\phi=0$. Looking at the function, we see that it starts a cycle $x=0$, but is decreasing, and this compatible with $-\sin$.
+
+Therefore, the function is 
+$$
+-7 \sin\left(\frac{2\pi}{3} x \right).
+$$
 
 ### Variable star
 
