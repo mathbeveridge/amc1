@@ -61,9 +61,9 @@ The **marginal cost** is the cost to produce 1 additional good.
 
 \bigskip
 
-Suppose that it costs \$250,000 to produce 1000 iPhones.
+Suppose that it costs \$250,000 to produce $i=1000$ iPhones.
 
-1.  If it costs \$250,440 to produce 1002 iPhones, what's the marginal cost of 1 iPhone?
+1.  If it costs \$250,440 to produce 1002 iPhones, what's the marginal cost of 1 iPhone when $i=1000$?
 2.  Using the marginal cost from part 1, estimate how much it will cost to produce 1030 iPhones.
 
 ### Farmland in the United States
@@ -88,10 +88,44 @@ $$
 1.  Find the velocity at $t=1$ and $t=2$ numerically (using small subintervals). Remember that the velocity is the derivative of the position.
 2.  Use desmos to graph the position curve $s(t)$ and the tangent lines at both $t=1$ and $t=2$.
 
+
+
+### Sketch the derivative
+
+For each of the following functions, sketch the graph of the derivative 
+
+
+1.
+
+```{r}
+slice_plot(-3*x+6 ~ x, domain(x=0:3), color='blue')
+```
+
+
+2.
+
+```{r}
+slice_plot(-sin(x) ~ x, domain(x=0:2*pi), color='blue')
+```
+
+3.
+
+```{r}
+slice_plot(-(x-2)^2+8 ~ x, domain(x=-2:6), color='blue')
+```
+
+
+4.
+
+```{r}
+slice_plot((x-1)*(x-2)*(x-3) ~ x, domain(x=0:4), color='blue')
+```
+
 \
 \
 \
 \
+
 
 ## Solutions
 
@@ -151,5 +185,37 @@ y = -5.44(t-1) + s(1) \\
 y = 5.03(t-2) + s(2) \\
 \end{array}
 $$
+
+
+### Sketch the derivative
+
+For each of the following functions, sketch the graph of the derivative 
+
+
+1.
+
+```{r}
+slice_plot(-3 ~ x, domain(x=0:3), color='blue')
+```
+
+
+2.
+
+```{r}
+slice_plot(-cos(x) ~ x, domain(x=0:2*pi), color='blue')
+```
+
+3.
+
+```{r}
+slice_plot(-2*(x-2) ~ x, domain(x=-2:6), color='blue')
+```
+
+
+3.
+
+```{r}
+slice_plot(11 - 12 *x + 3* x^2 ~ x, domain(x=0:4), color='blue')
+```
 
 </details>
