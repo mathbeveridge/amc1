@@ -10,7 +10,11 @@ library(mosaicCalc)
 ## Rundown
 
 ::: {.callout-note title="Learning goals"}
--   Coming Soon
+- Interpret the first derivative as slope and the second derivative as concavity.
+- Use the second derivative to determine the concavity of a function.
+- Identify the intervals on which a function has positive/negative first derivative, and positive/negative second derivative.
+- Visually identify the curves when given a function and its derivative.
+- Given a velocity function, describe the dynamics of its movement.
 :::
 
 ## Interpreting the First and Second Derivative
@@ -43,6 +47,25 @@ slice_plot(10 * (x-1)*(x-2)*(x)*(x+1) /(exp(x^2)+1)~x,
 1.  Estimate the intervals on which the derivative $f'(x)$ is positive and the intervals on which the derivative $f'(x)$ is negative
 2.  Estimate the intervals on which the second derivative $f''(x)$ is positive and the intervals on which the second derivative $f''(x)$ is negative
 
+
+### Sketch the Curve
+
+Sketch a graph of a continuous function $f$ on $[0,8]$ with the following properties. Clearly label the numbers on your axes.
+
+1. We have
+
+  - $f'(x) < 0$ for all $x$.
+  - $f''(x) < 0$ for $x < 4$,
+  - $f''(x) > 0$ for $x > 4$.
+  
+2. We have
+
+  - $f'(x) < 0$ for $x < 3$,
+  - $f'(x) > 0$ for $x > 3$,
+  - $f''(x) > 0$ for $x < 6$,
+  - $f''(x) < 0$ for $x > 6$
+
+
 ### Function Matching
 
 Three curves $f(x), g(x), h(x)$ are plotted below. These curves are actually a function, its derivative, and its second derivative. Which is which? How do you know?
@@ -50,6 +73,9 @@ Three curves $f(x), g(x), h(x)$ are plotted below. These curves are actually a f
 <!-- 2\ \frac{\sin\left(\pi\ \frac{x^{2}}{8}\right)}{1+x^{2}} -->
 
 ![](images/deriv-higher.png){width="75%"}
+
+
+
 
 ### A Plot of Velocity
 
@@ -94,6 +120,35 @@ Each of the scenarios below describes a quantity that is changing over time. For
 -   $f''(x)>0$ on $[0.9,1.75]$
 -   $f''(x)<0$ on $[0,0.9]$ and $[1.75,3]$
 
+
+### Sketch the Curve
+
+Here are the derivative curves for the given curves.
+
+1. Here is one example where we have
+
+  - $f'(x) < 0$ for all $x$.
+  - $f''(x) < 0$ for $x < 4$,
+  - $f''(x) > 0$ for $x > 4$.
+
+
+```{r, echo=FALSE, fig.width=4, fig.height=3}
+slice_plot(2*cos(pi* x/8)+1 ~ x, domain(x=0:8), color='blue')
+```
+
+2. Here is one example where we have
+
+  - $f'(x) < 0$ for $x < 3$,
+  - $f'(x) > 0$ for $x > 3$,
+  - $f''(x) > 0$ for $x < 6$,
+  - $f''(x) < 0$ for $x > 6$ 
+
+
+```{r, echo=FALSE, fig.width=4, fig.height=3}
+slice_plot(- sin(pi/6 * (x)) ~ x, domain(x=0:8), color='blue') 
+```
+
+
 ### Function Matching
 
 The function $g(x)$ is the derivative of $f(x)$. This is because $f(x)$ is increasing if and only if $g(x)$ is positive.
@@ -101,6 +156,7 @@ The function $g(x)$ is the derivative of $f(x)$. This is because $f(x)$ is incre
 Similarly, the function $h(x)$ is the derivative of $g(x)$.
 
 So we have $g(x)=f'(x)$ and $h(x) = f''(x)$.
+
 
 ### A Plot of Velocity
 

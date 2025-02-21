@@ -10,7 +10,10 @@ library(mosaicCalc)
 ## Rundown
 
 ::: {.callout-note title="Learning goals"}
--   Coming soon
+- Calculate/estimate the derivative of a function expressed in various ways (description, graph, symbolic, data).
+- Calculate marginal cost and interpret this quantity as a derivative.
+- Use Desmos to find the computational derivative of a function.
+- Sketch the derivative of a given function.
 :::
 
 ### The Derivative
@@ -97,29 +100,30 @@ For each of the following functions, sketch the graph of the derivative
 
 1.
 
-```{r}
+```{r, echo=FALSE, fig.width=4, fig.height=3}
 slice_plot(-3*x+6 ~ x, domain(x=0:3), color='blue')
 ```
 
 
 2.
 
-```{r}
+```{r, echo=FALSE, fig.width=4, fig.height=3}
 slice_plot(-sin(x) ~ x, domain(x=0:2*pi), color='blue')
 ```
 
 3.
 
-```{r}
+```{r, echo=FALSE, fig.width=4, fig.height=3}
 slice_plot(-(x-2)^2+8 ~ x, domain(x=-2:6), color='blue')
 ```
 
 
 4.
 
-```{r}
+```{r, echo=FALSE, fig.width=4, fig.height=3}
 slice_plot((x-1)*(x-2)*(x-3) ~ x, domain(x=0:4), color='blue')
 ```
+
 
 \
 \
@@ -189,33 +193,36 @@ $$
 
 ### Sketch the derivative
 
-For each of the following functions, sketch the graph of the derivative 
+Here are the derivative curves for the given curves.
 
 
 1.
 
-```{r}
+```{r, echo=FALSE, fig.width=4, fig.height=3}
 slice_plot(-3 ~ x, domain(x=0:3), color='blue')
 ```
 
 
 2.
 
-```{r}
+```{r, echo=FALSE, fig.width=4, fig.height=3}
 slice_plot(-cos(x) ~ x, domain(x=0:2*pi), color='blue')
 ```
 
 3.
 
-```{r}
+```{r, echo=FALSE, fig.width=4, fig.height=3}
 slice_plot(-2*(x-2) ~ x, domain(x=-2:6), color='blue')
 ```
 
 
-3.
+4.
 
-```{r}
+```{r, echo=FALSE, fig.width=4, fig.height=3}
 slice_plot(11 - 12 *x + 3* x^2 ~ x, domain(x=0:4), color='blue')
 ```
+
+
+
 
 </details>

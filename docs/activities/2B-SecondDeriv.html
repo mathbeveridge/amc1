@@ -456,16 +456,18 @@ window.Quarto = {
   <li><a href="#activities" id="toc-activities" class="nav-link" data-scroll-target="#activities"><span class="header-section-number">10.3</span> Activities</a>
   <ul class="collapse">
   <li><a href="#estimating-the-first-and-second-derivatives-from-a-graph" id="toc-estimating-the-first-and-second-derivatives-from-a-graph" class="nav-link" data-scroll-target="#estimating-the-first-and-second-derivatives-from-a-graph"><span class="header-section-number">10.3.1</span> Estimating the first and second derivatives from a graph</a></li>
-  <li><a href="#function-matching" id="toc-function-matching" class="nav-link" data-scroll-target="#function-matching"><span class="header-section-number">10.3.2</span> Function Matching</a></li>
-  <li><a href="#a-plot-of-velocity" id="toc-a-plot-of-velocity" class="nav-link" data-scroll-target="#a-plot-of-velocity"><span class="header-section-number">10.3.3</span> A Plot of Velocity</a></li>
-  <li><a href="#characterize-the-derivatives" id="toc-characterize-the-derivatives" class="nav-link" data-scroll-target="#characterize-the-derivatives"><span class="header-section-number">10.3.4</span> Characterize the Derivatives</a></li>
+  <li><a href="#sketch-the-curve" id="toc-sketch-the-curve" class="nav-link" data-scroll-target="#sketch-the-curve"><span class="header-section-number">10.3.2</span> Sketch the Curve</a></li>
+  <li><a href="#function-matching" id="toc-function-matching" class="nav-link" data-scroll-target="#function-matching"><span class="header-section-number">10.3.3</span> Function Matching</a></li>
+  <li><a href="#a-plot-of-velocity" id="toc-a-plot-of-velocity" class="nav-link" data-scroll-target="#a-plot-of-velocity"><span class="header-section-number">10.3.4</span> A Plot of Velocity</a></li>
+  <li><a href="#characterize-the-derivatives" id="toc-characterize-the-derivatives" class="nav-link" data-scroll-target="#characterize-the-derivatives"><span class="header-section-number">10.3.5</span> Characterize the Derivatives</a></li>
   </ul></li>
   <li><a href="#solutions" id="toc-solutions" class="nav-link" data-scroll-target="#solutions"><span class="header-section-number">10.4</span> Solutions</a>
   <ul class="collapse">
   <li><a href="#estimating-the-first-and-second-derivatives-from-a-graph-1" id="toc-estimating-the-first-and-second-derivatives-from-a-graph-1" class="nav-link" data-scroll-target="#estimating-the-first-and-second-derivatives-from-a-graph-1"><span class="header-section-number">10.4.1</span> Estimating the first and second derivatives from a graph</a></li>
-  <li><a href="#function-matching-1" id="toc-function-matching-1" class="nav-link" data-scroll-target="#function-matching-1"><span class="header-section-number">10.4.2</span> Function Matching</a></li>
-  <li><a href="#a-plot-of-velocity-1" id="toc-a-plot-of-velocity-1" class="nav-link" data-scroll-target="#a-plot-of-velocity-1"><span class="header-section-number">10.4.3</span> A Plot of Velocity</a></li>
-  <li><a href="#characterize-the-derivatives-1" id="toc-characterize-the-derivatives-1" class="nav-link" data-scroll-target="#characterize-the-derivatives-1"><span class="header-section-number">10.4.4</span> Characterize the Derivatives</a></li>
+  <li><a href="#sketch-the-curve-1" id="toc-sketch-the-curve-1" class="nav-link" data-scroll-target="#sketch-the-curve-1"><span class="header-section-number">10.4.2</span> Sketch the Curve</a></li>
+  <li><a href="#function-matching-1" id="toc-function-matching-1" class="nav-link" data-scroll-target="#function-matching-1"><span class="header-section-number">10.4.3</span> Function Matching</a></li>
+  <li><a href="#a-plot-of-velocity-1" id="toc-a-plot-of-velocity-1" class="nav-link" data-scroll-target="#a-plot-of-velocity-1"><span class="header-section-number">10.4.4</span> A Plot of Velocity</a></li>
+  <li><a href="#characterize-the-derivatives-1" id="toc-characterize-the-derivatives-1" class="nav-link" data-scroll-target="#characterize-the-derivatives-1"><span class="header-section-number">10.4.5</span> Characterize the Derivatives</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -505,7 +507,11 @@ Learning goals
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li>Coming Soon</li>
+<li>Interpret the first derivative as slope and the second derivative as concavity.</li>
+<li>Use the second derivative to determine the concavity of a function.</li>
+<li>Identify the intervals on which a function has positive/negative first derivative, and positive/negative second derivative.</li>
+<li>Visually identify the curves when given a function and its derivative.</li>
+<li>Given a velocity function, describe the dynamics of its movement.</li>
 </ul>
 </div>
 </div>
@@ -544,14 +550,35 @@ Learning goals
 <li>Estimate the intervals on which the second derivative <span class="math inline">\(f''(x)\)</span> is positive and the intervals on which the second derivative <span class="math inline">\(f''(x)\)</span> is negative</li>
 </ol>
 </section>
-<section id="function-matching" class="level3" data-number="10.3.2">
-<h3 data-number="10.3.2" class="anchored" data-anchor-id="function-matching"><span class="header-section-number">10.3.2</span> Function Matching</h3>
+<section id="sketch-the-curve" class="level3" data-number="10.3.2">
+<h3 data-number="10.3.2" class="anchored" data-anchor-id="sketch-the-curve"><span class="header-section-number">10.3.2</span> Sketch the Curve</h3>
+<p>Sketch a graph of a continuous function <span class="math inline">\(f\)</span> on <span class="math inline">\([0,8]\)</span> with the following properties. Clearly label the numbers on your axes.</p>
+<ol type="1">
+<li>We have</li>
+</ol>
+<ul>
+<li><span class="math inline">\(f'(x) &lt; 0\)</span> for all <span class="math inline">\(x\)</span>.</li>
+<li><span class="math inline">\(f''(x) &lt; 0\)</span> for <span class="math inline">\(x &lt; 4\)</span>,</li>
+<li><span class="math inline">\(f''(x) &gt; 0\)</span> for <span class="math inline">\(x &gt; 4\)</span>.</li>
+</ul>
+<ol start="2" type="1">
+<li>We have</li>
+</ol>
+<ul>
+<li><span class="math inline">\(f'(x) &lt; 0\)</span> for <span class="math inline">\(x &lt; 3\)</span>,</li>
+<li><span class="math inline">\(f'(x) &gt; 0\)</span> for <span class="math inline">\(x &gt; 3\)</span>,</li>
+<li><span class="math inline">\(f''(x) &gt; 0\)</span> for <span class="math inline">\(x &lt; 6\)</span>,</li>
+<li><span class="math inline">\(f''(x) &lt; 0\)</span> for <span class="math inline">\(x &gt; 6\)</span></li>
+</ul>
+</section>
+<section id="function-matching" class="level3" data-number="10.3.3">
+<h3 data-number="10.3.3" class="anchored" data-anchor-id="function-matching"><span class="header-section-number">10.3.3</span> Function Matching</h3>
 <p>Three curves <span class="math inline">\(f(x), g(x), h(x)\)</span> are plotted below. These curves are actually a function, its derivative, and its second derivative. Which is which? How do you know?</p>
 <!-- 2\ \frac{\sin\left(\pi\ \frac{x^{2}}{8}\right)}{1+x^{2}} -->
 <p><img src="images/deriv-higher.png" class="img-fluid" style="width:75.0%"></p>
 </section>
-<section id="a-plot-of-velocity" class="level3" data-number="10.3.3">
-<h3 data-number="10.3.3" class="anchored" data-anchor-id="a-plot-of-velocity"><span class="header-section-number">10.3.3</span> A Plot of Velocity</h3>
+<section id="a-plot-of-velocity" class="level3" data-number="10.3.4">
+<h3 data-number="10.3.4" class="anchored" data-anchor-id="a-plot-of-velocity"><span class="header-section-number">10.3.4</span> A Plot of Velocity</h3>
 <p>Recall that displacement <span class="math inline">\(x(t)\)</span>, velocity <span class="math inline">\(v(t)\)</span> and acceleration <span class="math inline">\(a(t)\)</span> are related by the equations</p>
 <p><span class="math display">\[  v = \frac{\partial x}{\partial t} \quad \mbox{and} \quad a = \frac{\partial v}{\partial t} = \frac{\partial^2 x}{\partial t^2}.\]</span> Here is a plot of <strong>velocity</strong> <span class="math inline">\(v(t)\)</span> of an object.</p>
 <div class="cell">
@@ -569,8 +596,8 @@ Learning goals
 <li>The position of the object is increasing.</li>
 </ol>
 </section>
-<section id="characterize-the-derivatives" class="level3" data-number="10.3.4">
-<h3 data-number="10.3.4" class="anchored" data-anchor-id="characterize-the-derivatives"><span class="header-section-number">10.3.4</span> Characterize the Derivatives</h3>
+<section id="characterize-the-derivatives" class="level3" data-number="10.3.5">
+<h3 data-number="10.3.5" class="anchored" data-anchor-id="characterize-the-derivatives"><span class="header-section-number">10.3.5</span> Characterize the Derivatives</h3>
 <p>Each of the scenarios below describes a quantity that is changing over time. For each one, (a) determine whether the first derivative is positive, negative or zero and (b) determine whether the second derivative is positive, negative or zero.</p>
 <ol type="1">
 <li>The number of views of a video that is going viral.</li>
@@ -602,21 +629,60 @@ Click for Solutions
 <li><span class="math inline">\(f''(x)&lt;0\)</span> on <span class="math inline">\([0,0.9]\)</span> and <span class="math inline">\([1.75,3]\)</span></li>
 </ul>
 </section>
-<section id="function-matching-1" class="level3" data-number="10.4.2">
-<h3 data-number="10.4.2" class="anchored" data-anchor-id="function-matching-1"><span class="header-section-number">10.4.2</span> Function Matching</h3>
+<section id="sketch-the-curve-1" class="level3" data-number="10.4.2">
+<h3 data-number="10.4.2" class="anchored" data-anchor-id="sketch-the-curve-1"><span class="header-section-number">10.4.2</span> Sketch the Curve</h3>
+<p>Here are the derivative curves for the given curves.</p>
+<ol type="1">
+<li>Here is one example where we have</li>
+</ol>
+<ul>
+<li><span class="math inline">\(f'(x) &lt; 0\)</span> for all <span class="math inline">\(x\)</span>.</li>
+<li><span class="math inline">\(f''(x) &lt; 0\)</span> for <span class="math inline">\(x &lt; 4\)</span>,</li>
+<li><span class="math inline">\(f''(x) &gt; 0\)</span> for <span class="math inline">\(x &gt; 4\)</span>.</li>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="2B-SecondDeriv_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="384"></p>
+</figure>
+</div>
+</div>
+</div>
+<ol start="2" type="1">
+<li>Here is one example where we have</li>
+</ol>
+<ul>
+<li><span class="math inline">\(f'(x) &lt; 0\)</span> for <span class="math inline">\(x &lt; 3\)</span>,</li>
+<li><span class="math inline">\(f'(x) &gt; 0\)</span> for <span class="math inline">\(x &gt; 3\)</span>,</li>
+<li><span class="math inline">\(f''(x) &gt; 0\)</span> for <span class="math inline">\(x &lt; 6\)</span>,</li>
+<li><span class="math inline">\(f''(x) &lt; 0\)</span> for <span class="math inline">\(x &gt; 6\)</span></li>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="2B-SecondDeriv_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="384"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="function-matching-1" class="level3" data-number="10.4.3">
+<h3 data-number="10.4.3" class="anchored" data-anchor-id="function-matching-1"><span class="header-section-number">10.4.3</span> Function Matching</h3>
 <p>The function <span class="math inline">\(g(x)\)</span> is the derivative of <span class="math inline">\(f(x)\)</span>. This is because <span class="math inline">\(f(x)\)</span> is increasing if and only if <span class="math inline">\(g(x)\)</span> is positive.</p>
 <p>Similarly, the function <span class="math inline">\(h(x)\)</span> is the derivative of <span class="math inline">\(g(x)\)</span>.</p>
 <p>So we have <span class="math inline">\(g(x)=f'(x)\)</span> and <span class="math inline">\(h(x) = f''(x)\)</span>.</p>
 </section>
-<section id="a-plot-of-velocity-1" class="level3" data-number="10.4.3">
-<h3 data-number="10.4.3" class="anchored" data-anchor-id="a-plot-of-velocity-1"><span class="header-section-number">10.4.3</span> A Plot of Velocity</h3>
+<section id="a-plot-of-velocity-1" class="level3" data-number="10.4.4">
+<h3 data-number="10.4.4" class="anchored" data-anchor-id="a-plot-of-velocity-1"><span class="header-section-number">10.4.4</span> A Plot of Velocity</h3>
 <ol type="1">
 <li>Since the plot shows <strong>velocity</strong>, its derivative is the <strong>acceleration</strong>. So we have positive acceleration when the graph is increasing. This is true on <span class="math inline">\([0,0.6]\)</span> and <span class="math inline">\([1.55,2]\)</span>.</li>
 <li>The position of the object is increasing whenever the velocity is positive. The graph is above the <span class="math inline">\(x\)</span>-axis on <span class="math inline">\([0,0.9]\)</span>.</li>
 </ol>
 </section>
-<section id="characterize-the-derivatives-1" class="level3" data-number="10.4.4">
-<h3 data-number="10.4.4" class="anchored" data-anchor-id="characterize-the-derivatives-1"><span class="header-section-number">10.4.4</span> Characterize the Derivatives</h3>
+<section id="characterize-the-derivatives-1" class="level3" data-number="10.4.5">
+<h3 data-number="10.4.5" class="anchored" data-anchor-id="characterize-the-derivatives-1"><span class="header-section-number">10.4.5</span> Characterize the Derivatives</h3>
 <ol type="1">
 <li>Both the first and second derivatives are positive. The number of views is increasing at a faster and faster rate.</li>
 <li>The first derivative is negative because the height of the bird is decreasing. The second derivative is positive because the bird is slowing down as it approaches the ground.</li>
