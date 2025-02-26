@@ -10,9 +10,15 @@ library(mosaicCalc)
 ## Rundown
 
 ::: {.callout-note title="Learning goals"}
-
-- Coming Soon
-
+- Define a local linear approximation.
+- Create the linearization $L_a(x)$ for function $f(x)$ at $x=a$ using the formula $$
+    L_a(x) = f(a) + f'(a) (x-a).
+    $$
+-   Approximate $f(x)$ near $x=a$ using the linearization $L_a(x)$.
+-   Create the linearization $L_{(a,b)}(x,y)$ for function $f(x,y)$ at point $(a,b)$ using the formula $$
+    L_{(a,b)}(x,y) = f(a,b) + f_x(a,b) (x-a) + f_y(a,b) (y-b).
+    $$
+-   Approximate $f(x,y)$ near the point $(a,b)$ using the linearization $L_{(a,b)}(x)$.
 :::
 
 ### Linearization of $f(x)$
@@ -77,8 +83,6 @@ We've talked about windchill $w(t,v)$ as a function of temperature $t$ and wind 
 <details>
 
 <summary>Click for Solutions</summary>
-
-
 
 ### Estimating Sugar Solution Temperature
 

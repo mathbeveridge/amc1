@@ -11,7 +11,11 @@ library(latticeExtra)
 ## Rundown
 
 ::: {.callout-note title="Learning goals"}
--   Coming Soon
+-   Define what a partial derivative is.
+-   Explain the difference between $f_x(x,y)$ and $f_y(x,y)$
+-   Estimate the partial derivatives from a table of data
+-   Estimate the partial derivatives from a contour plot.
+-   Use desmos to approximate the partial derivatives
 :::
 
 ## Activities
@@ -20,51 +24,19 @@ library(latticeExtra)
 
 The maximum duration of a scuba dive $T(V,D)$ (in minutes) depends on the volume $V$ of air (at sea-level pressure) in the tank and the depth $D$ (in feet) of the dive. The following table shows the estimated dive times for various combinations of air volume and dive depth.
 
-
-<table style="width: 70%; margin-left: auto; margin-right: auto;" border="1" cellspacing="2" cellpadding="2" align="center">
-<tbody>
-<tr>
-<td style="margin-left: 30px; text-align: center;" rowspan="2" colspan="2"><strong>Dive Time (minutes)</strong> </td>
-<td style="text-align: center;" colspan="4"><strong> Air Volume</strong></td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>20 ft<sup>3</sup></strong></td>
-<td style="text-align: center;"><strong>40 ft<sup>3</sup></strong></td>
-<td style="text-align: center;"><strong>60 ft<sup>3</sup></strong></td>
-<td style="text-align: center;"><strong>80 ft<sup>3</sup></strong></td>
-</tr>
-<tr align="right">
-<td style="margin-left: 30px; text-align: center;" rowspan="5"><strong>Depth</strong></td>
-<td style="text-align: center;"><strong>20 ft</strong></td>
-<td style="text-align: center;">12.5</td>
-<td style="text-align: center;">25.0</td>
-<td style="text-align: center;">37.5</td>
-<td style="text-align: center;">50.0</td>
-</tr>
-<tr align="right">
-<td style="text-align: center;"><strong>40 ft</strong></td>
-<td style="text-align: center;">9.0</td>
-<td style="text-align: center;">18.0</td>
-<td style="text-align: center;">27.0</td>
-<td style="text-align: center;">36.0</td>
-</tr>
-<tr align="right">
-<td style="text-align: center;"><strong>60 ft</strong></td>
-<td style="text-align: center;">7.1</td>
-<td style="text-align: center;">14.2</td>
-<td style="text-align: center;">21.3</td>
-<td style="text-align: center;">28.4</td>
-</tr>
-<tr align="right">
-<td style="text-align: center;"><strong>80 ft</strong></td>
-<td style="text-align: center;">5.8</td>
-<td style="text-align: center;">11.6</td>
-<td style="text-align: center;">17.4</td>
-<td style="text-align: center;">23.2</td>
-</tr>
-</tbody>
-</table>
-
++:------------------------:+:---------------:+
+| **Dive Time (minutes)**  | **Air Volume**  |
++--------------------------+-----------------+
+| **20 ft^3^**             | **40 ft^3^**    |
++--------------------------+-----------------+
+| **Depth**                | **20 ft**       |
++--------------------------+-----------------+
+| **40 ft**                | 9.0             |
++--------------------------+-----------------+
+| **60 ft**                | 7.1             |
++--------------------------+-----------------+
+| **80 ft**                | 5.8             |
++--------------------------+-----------------+
 
 Use this table to estimate the derivatives $\displaystyle{\frac{\partial T}{\partial V}}$ and $\displaystyle{\frac{\partial T}{\partial D}}$ at the point $(V=60, T=40)$. Give units for each of these derivatives and then interpret what these numbers mean.
 

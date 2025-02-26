@@ -502,7 +502,11 @@ Learning goals
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li>Coming Soon</li>
+<li>Define what a partial derivative is.</li>
+<li>Explain the difference between <span class="math inline">\(f_x(x,y)\)</span> and <span class="math inline">\(f_y(x,y)\)</span></li>
+<li>Estimate the partial derivatives from a table of data</li>
+<li>Estimate the partial derivatives from a contour plot.</li>
+<li>Use desmos to approximate the partial derivatives</li>
 </ul>
 </div>
 </div>
@@ -512,100 +516,35 @@ Learning goals
 <section id="estimating-from-data" class="level3" data-number="11.2.1">
 <h3 data-number="11.2.1" class="anchored" data-anchor-id="estimating-from-data"><span class="header-section-number">11.2.1</span> Estimating From Data</h3>
 <p>The maximum duration of a scuba dive <span class="math inline">\(T(V,D)\)</span> (in minutes) depends on the volume <span class="math inline">\(V\)</span> of air (at sea-level pressure) in the tank and the depth <span class="math inline">\(D\)</span> (in feet) of the dive. The following table shows the estimated dive times for various combinations of air volume and dive depth.</p>
-<table style="width: 70%; margin-left: auto; margin-right: auto;" border="1" cellspacing="2" cellpadding="2" align="center">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 37%">
+<col style="width: 25%">
+</colgroup>
 <tbody>
-<tr>
-<td style="margin-left: 30px; text-align: center;" rowspan="2" colspan="2">
-<strong>Dive Time (minutes)</strong>&nbsp;
-</td>
-<td style="text-align: center;" colspan="4">
-<strong>&nbsp;Air Volume</strong>
-</td>
+<tr class="odd">
+<td style="text-align: center;"><strong>Dive Time (minutes)</strong></td>
+<td style="text-align: center;"><strong>Air Volume</strong></td>
 </tr>
-<tr>
-<td style="text-align: center;">
-<strong>20&nbsp;ft<sup>3</sup></strong>
-</td>
-<td style="text-align: center;">
-<strong>40 ft<sup>3</sup></strong>
-</td>
-<td style="text-align: center;">
-<strong>60 ft<sup>3</sup></strong>
-</td>
-<td style="text-align: center;">
-<strong>80 ft<sup>3</sup></strong>
-</td>
+<tr class="even">
+<td style="text-align: center;"><strong>20&nbsp;ft<sup>3</sup></strong></td>
+<td style="text-align: center;"><strong>40 ft<sup>3</sup></strong></td>
 </tr>
-<tr align="right">
-<td style="margin-left: 30px; text-align: center;" rowspan="5">
-<strong>Depth</strong>
-</td>
-<td style="text-align: center;">
-<strong>20 ft</strong>
-</td>
-<td style="text-align: center;">
-12.5
-</td>
-<td style="text-align: center;">
-25.0
-</td>
-<td style="text-align: center;">
-37.5
-</td>
-<td style="text-align: center;">
-50.0
-</td>
+<tr class="odd">
+<td style="text-align: center;"><strong>Depth</strong></td>
+<td style="text-align: center;"><strong>20 ft</strong></td>
 </tr>
-<tr align="right">
-<td style="text-align: center;">
-<strong>40 ft</strong>
-</td>
-<td style="text-align: center;">
-9.0
-</td>
-<td style="text-align: center;">
-18.0
-</td>
-<td style="text-align: center;">
-27.0
-</td>
-<td style="text-align: center;">
-36.0
-</td>
+<tr class="even">
+<td style="text-align: center;"><strong>40 ft</strong></td>
+<td style="text-align: center;">9.0</td>
 </tr>
-<tr align="right">
-<td style="text-align: center;">
-<strong>60 ft</strong>
-</td>
-<td style="text-align: center;">
-7.1
-</td>
-<td style="text-align: center;">
-14.2
-</td>
-<td style="text-align: center;">
-21.3
-</td>
-<td style="text-align: center;">
-28.4
-</td>
+<tr class="odd">
+<td style="text-align: center;"><strong>60 ft</strong></td>
+<td style="text-align: center;">7.1</td>
 </tr>
-<tr align="right">
-<td style="text-align: center;">
-<strong>80 ft</strong>
-</td>
-<td style="text-align: center;">
-5.8
-</td>
-<td style="text-align: center;">
-11.6
-</td>
-<td style="text-align: center;">
-17.4
-</td>
-<td style="text-align: center;">
-23.2
-</td>
+<tr class="even">
+<td style="text-align: center;"><strong>80 ft</strong></td>
+<td style="text-align: center;">5.8</td>
 </tr>
 </tbody>
 </table>
