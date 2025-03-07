@@ -10,7 +10,11 @@ library(mosaicCalc)
 ## Rundown
 
 ::: {.callout-note title="Learning goals"}
--   Coming Soon
+-   Find the partial derivatives of a function $f(x,y)$ by holding one variable fixed and then applying the rules of differentiation.
+-   Find the second partial derivatives $f_{xx}, f_{xy}, f_{yx}, f_{yy}$.
+-   Find the gradient vector $\nabla f(x,y) = \langle f_x, f_y \rangle$
+-   Evaluate the gradient vector at a point $(a,b)$
+-   Use the gradient to find the direction of greatest increase, and the magnitude of the gradient to find the rate of change (slope) in that direction
 :::
 
 ## Activities

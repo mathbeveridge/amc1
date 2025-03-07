@@ -10,13 +10,14 @@ library(mosaicCalc)
 ## Rundown
 
 ::: {.callout-note title="Learning goals"}
--   Coming Soon
+-   Find the derivative using the chain rule
+-   Solve a "word problem" about rates of change by using derivatives.
+-   Solve a visual chain rule problem.
 :::
 
-### Chain Rule 
+### Chain Rule
 
-If $y=f(t)$ and $t=g(x)$ are functions, then the derivative of $y=f(g(x))$ is given by
-$$\frac{dy}{dx}=\frac{dy}{dt}\frac{dt}{dx} \phantom{hihi}\text{ or } \phantom{hihi}\frac{d}{dx}(f(g(x)))=f'(g(x))g'(x)=D(outside)D(inside)$$
+If $y=f(t)$ and $t=g(x)$ are functions, then the derivative of $y=f(g(x))$ is given by $$\frac{dy}{dx}=\frac{dy}{dt}\frac{dt}{dx} \phantom{hihi}\text{ or } \phantom{hihi}\frac{d}{dx}(f(g(x)))=f'(g(x))g'(x)=D(outside)D(inside)$$
 
 ## Activities
 
