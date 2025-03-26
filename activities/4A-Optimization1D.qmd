@@ -10,9 +10,7 @@ library(mosaicCalc)
 ## Rundown
 
 ::: {.callout-note title="Learning goals"}
-
-- Coming Soon
-
+-   Coming Soon
 :::
 
 ## Activities
@@ -45,12 +43,12 @@ The function $f(x) = x^4-8 x^3+22 x^2-24 x$ has critical points at $x=1$ and $x=
 
 ### Cupcake Store
 
-A cupcake store finds that at a price of \$4.00, the demand is 400 cupcakes. For every \$.25 decrease in price, the demand increases by 20 cupcakes.
 
-1.  Define a function $q(x)$ that gives the demand for cupcakes at a price of $x$ dollars.
-2.  The revenue for a price of $x$ dollars is $r(x) = x \cdot q(x)$. Use your function from part (a) to find the price that maximizes revenue.
+A cupcake store finds that at a price of \$4.00, the demand is 400 cupcakes. For every $1 decrease in price, the demand increases by 80 cupcakes. 
 
-Find the price and quantity that maximize the revenue.
+1. Find the formula $r(x)$ for the revenue where $x$ is the decrease in price (in dollars).
+
+2. Find the price and quantity that maximize the revenue.
 
 \
 \
@@ -62,8 +60,6 @@ Find the price and quantity that maximize the revenue.
 <details>
 
 <summary>Click for Solutions</summary>
-
-
 
 ### Characterize the Extrema
 
@@ -120,16 +116,27 @@ Therefore $x=1$ and $x=3$ are local minima and $x=2$ is a local maximum.
 
 ### Cupcake Store
 
-A cupcake store finds that at a price of \$4.00, the demand is 400 cupcakes. For every \$.25 decrease in price, the demand increases by 20 cupcakes.
 
-1.  The description of the demand function tells us that $q(x)$ is a linear function with a negative slope. The slope is $20/(-.25)=-80$. So $q(x) = -80x + c$ and we can determine $c$ by using the fact that $q(4)=400$. We have $$
-    400 = -80 \cdot 4 + c = -320 + c
-    $$ so $c=720$. In conclusion, our demand function is $$q(x) = -80x + 720.$$
+A cupcake store finds that at a price of \$4.00, the demand is 400 cupcakes. For every $1 increase in price, the demand decreases by 80 cupcakes. 
 
-2.  The revenue at price $x$ is $$r(x) = x q(x) = x \left(-80x + 720 \right) = -80x^2 + 720x.$$ Taking the derivative and solving for critical points gives $$
-    -160 x + 720 = 0
-    $$ and therefore $x=720/160= 4.5$. By the second derivative test, this is a local maximum.
+1. The revenue function is
+$$r(x) = (4+x)(400-80x) = 1600 + 80x - 80x^2.$$ 
 
-We sell $q(4.5) = 400 - 40 = 360$ cupcakes and obtain revenue $r(4.5) = 4.5 \cdot 360 = 1620$.
+
+2. To find the price and quantity that maximize the revenue, we set the derivative equal to 0. This gives
+$$
+r'(x) = 80 - 160x = 0
+$$
+and solving gives
+$$
+x=1/2.
+$$
+Furthermore, the second derivative is $r''(x) = -160 < 0$ so this point is a maximum.
+
+The optimal price is \$4.50 and the maximal revenue is
+$$
+r(1/2)= 1600 + 40 - 20 = 1620.
+$$
+
 
 </details>

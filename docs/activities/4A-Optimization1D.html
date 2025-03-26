@@ -541,12 +541,11 @@ Learning goals
 </section>
 <section id="cupcake-store" class="level3" data-number="18.2.4">
 <h3 data-number="18.2.4" class="anchored" data-anchor-id="cupcake-store"><span class="header-section-number">18.2.4</span> Cupcake Store</h3>
-<p>A cupcake store finds that at a price of $4.00, the demand is 400 cupcakes. For every $.25 decrease in price, the demand increases by 20 cupcakes.</p>
+<p>A cupcake store finds that at a price of $4.00, the demand is 400 cupcakes. For every $1 decrease in price, the demand increases by 80 cupcakes.</p>
 <ol type="1">
-<li>Define a function <span class="math inline">\(q(x)\)</span> that gives the demand for cupcakes at a price of <span class="math inline">\(x\)</span> dollars.</li>
-<li>The revenue for a price of <span class="math inline">\(x\)</span> dollars is <span class="math inline">\(r(x) = x \cdot q(x)\)</span>. Use your function from part (a) to find the price that maximizes revenue.</li>
+<li><p>Find the formula <span class="math inline">\(r(x)\)</span> for the revenue where <span class="math inline">\(x\)</span> is the decrease in price (in dollars).</p></li>
+<li><p>Find the price and quantity that maximize the revenue.</p></li>
 </ol>
-<p>Find the price and quantity that maximize the revenue.</p>
 <p><br>
 <br>
 <br>
@@ -618,16 +617,18 @@ f''(3) &amp;=&amp; 108 - 144 + 44 &gt; 0 \\
 </section>
 <section id="cupcake-store-1" class="level3" data-number="18.3.4">
 <h3 data-number="18.3.4" class="anchored" data-anchor-id="cupcake-store-1"><span class="header-section-number">18.3.4</span> Cupcake Store</h3>
-<p>A cupcake store finds that at a price of $4.00, the demand is 400 cupcakes. For every $.25 decrease in price, the demand increases by 20 cupcakes.</p>
+<p>A cupcake store finds that at a price of $4.00, the demand is 400 cupcakes. For every $1 increase in price, the demand decreases by 80 cupcakes.</p>
 <ol type="1">
-<li><p>The description of the demand function tells us that <span class="math inline">\(q(x)\)</span> is a linear function with a negative slope. The slope is <span class="math inline">\(20/(-.25)=-80\)</span>. So <span class="math inline">\(q(x) = -80x + c\)</span> and we can determine <span class="math inline">\(c\)</span> by using the fact that <span class="math inline">\(q(4)=400\)</span>. We have <span class="math display">\[
-400 = -80 \cdot 4 + c = -320 + c
-\]</span> so <span class="math inline">\(c=720\)</span>. In conclusion, our demand function is <span class="math display">\[q(x) = -80x + 720.\]</span></p></li>
-<li><p>The revenue at price <span class="math inline">\(x\)</span> is <span class="math display">\[r(x) = x q(x) = x \left(-80x + 720 \right) = -80x^2 + 720x.\]</span> Taking the derivative and solving for critical points gives <span class="math display">\[
--160 x + 720 = 0
-\]</span> and therefore <span class="math inline">\(x=720/160= 4.5\)</span>. By the second derivative test, this is a local maximum.</p></li>
+<li><p>The revenue function is <span class="math display">\[r(x) = (4+x)(400-80x) = 1600 + 80x - 80x^2.\]</span></p></li>
+<li><p>To find the price and quantity that maximize the revenue, we set the derivative equal to 0. This gives <span class="math display">\[
+r'(x) = 80 - 160x = 0
+\]</span> and solving gives <span class="math display">\[
+x=1/2.
+\]</span> Furthermore, the second derivative is <span class="math inline">\(r''(x) = -160 &lt; 0\)</span> so this point is a maximum.</p></li>
 </ol>
-<p>We sell <span class="math inline">\(q(4.5) = 400 - 40 = 360\)</span> cupcakes and obtain revenue <span class="math inline">\(r(4.5) = 4.5 \cdot 360 = 1620\)</span>.</p>
+<p>The optimal price is $4.50 and the maximal revenue is <span class="math display">\[
+r(1/2)= 1600 + 40 - 20 = 1620.
+\]</span></p>
 </section></details>
 
 
