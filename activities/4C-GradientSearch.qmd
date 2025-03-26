@@ -10,9 +10,10 @@ library(mosaicCalc)
 ## Rundown
 
 ::: {.callout-note title="Learning goals"}
-
-- Coming Soon
-
+-   Find a local maximum of a 2D function $f(x,y)$ using gradient search in *RStudio*.
+-   Find a local minimum of a 2D function $f(x,y)$ using gradient search in *RStudio*.
+-   Simulate gradient search using the contour plot of a 2D function to find the trajectory that gradient search follows to reach an extreme point.
+-   Explain why the extreme point found by gradient search depends upon the starting point that we use.
 :::
 
 ### Gradient Search Example
@@ -80,8 +81,6 @@ f(a,b) - f(a+r*cos(theta), b+r*sin(theta))
 <details>
 
 <summary>Click for Solutions</summary>
-
-
 
 ### Finding a Local Minimum
 

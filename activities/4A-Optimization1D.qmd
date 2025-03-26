@@ -10,7 +10,10 @@ library(mosaicCalc)
 ## Rundown
 
 ::: {.callout-note title="Learning goals"}
--   Coming Soon
+-   Find the local maxima, local minima, global maximum and global minimum for the graph of a function.
+-   Find the critical points of $f(x)$ by solving $f'(x)=0$.
+-   Use the first derivative test to determine whether a critical point is a local minimum, a local maximum or a point of inflection.
+-   Use the second derivative test to determine whether a critical point is a local minimum or a local maximum.
 :::
 
 ## Activities
@@ -46,7 +49,7 @@ The function $f(x) = x^4-8 x^3+22 x^2-24 x$ has critical points at $x=1$ and $x=
 
 A cupcake store finds that at a price of \$4.00, the demand is 400 cupcakes. For every $1 increase in price, the demand decreases by 80 cupcakes. 
 
-1. Find the formula $r(x)$ for the revenue where $x$ is the decrease in price (in dollars).
+1. Find the formula $r(x)$ for the revenue where $x$ is the increase in price (in dollars).
 
 2. Find the price and quantity that maximize the revenue.
 

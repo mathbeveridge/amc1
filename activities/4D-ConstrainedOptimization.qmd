@@ -10,11 +10,12 @@ library(mosaicCalc)
 ## Rundown
 
 ::: {.callout-note title="Learning goals"}
-
-- Coming Soon
-
+-   Identify the objective function and the constaint function for a constrained optimization problem.
+-   Explain why the extreme point for a constrained optimization problem occurs where the constraint contour is tangent to a contour of the objective function.
+-   Use RStudio to create a contour plot to solve a constrained optimization problem.
+-   Estimate the value of the Lagrange multiplier $\lambda$ using a contour plot.
+-   Interpret the Lagrange multiplier $\lambda$ as a rate of change.
 :::
-
 
 ### Creating a Contour Plot for 2D Optimization
 
@@ -69,8 +70,6 @@ Below is a plot of an objective function $f(x,y)$ in red, and its constraint fun
 <details>
 
 <summary>Click for Solutions</summary>
-
-
 
 ### Constrained Production
 
