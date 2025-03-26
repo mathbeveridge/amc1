@@ -44,7 +44,7 @@ The function $f(x) = x^4-8 x^3+22 x^2-24 x$ has critical points at $x=1$ and $x=
 ### Cupcake Store
 
 
-A cupcake store finds that at a price of \$4.00, the demand is 400 cupcakes. For every $1 decrease in price, the demand increases by 80 cupcakes. 
+A cupcake store finds that at a price of \$4.00, the demand is 400 cupcakes. For every $1 increase in price, the demand decreases by 80 cupcakes. 
 
 1. Find the formula $r(x)$ for the revenue where $x$ is the decrease in price (in dollars).
 
