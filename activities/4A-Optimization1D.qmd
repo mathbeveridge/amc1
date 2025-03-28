@@ -34,8 +34,25 @@ image: https://openstax.org/books/calculus-volume-1/pages/4-3-maxima-and-minima
 
 Find the critical point(s) of the following functions. Then use the first derivative test to determine whether it is a local minimum, a local maximum, or neither
 
-1.  $f(x) = x - e^x$
-2.  $g(x) = x + \sin(x)$ on $[0,2\pi]$
+1.  $f(x) = x^4 + 8 x^3 + 16 x^2$
+2.  $g(x) = x - e^x$
+3.  $h(x) = x + \sin(x)$ on $[0,2\pi]$
+
+### Visual First Derivative Test
+
+The graph of the derivative $y=f'(x)$ is shown below. The function is defined on the interval $[0,7]$.
+
+```{r, echo=FALSE}
+slice_plot((x - 1) *(x - 3)^2 *(x - 6) ~ x, domain(x=0:7), color="blue") + ylab("df/dx")
+```
+
+Estimate the $x$ values where ...
+
+1. the original function $f(x)$ has a local minimum.
+
+2. the original function $f(x)$ has a local maximum.
+
+3. the original function $f(x)$ has a point of inflection.
 
 ### Second Derivative Test
 
@@ -43,6 +60,33 @@ The function $f(x) = x^4-8 x^3+22 x^2-24 x$ has critical points at $x=1$ and $x=
 
 1.  Find $f''(x)$.
 2.  Use the second derivative test to determine whether each of the critical points is a minimum or a maximum.
+
+### Second Derivative Test 2
+
+Consider the function $f(x) = 2x^5 - 5x^2 + 10$.
+
+1. Calculate $f'(x)$ and then find the critical points of $f(x)$.
+
+2. Calculate $f''(x)$ and then use the second derivative test to determine whether each critical point is a local maximum or a local minimum.
+
+### Fenced Garden Design
+
+A gardener has 1200 feet of fencing. This fencing will be used to create a 3 by 2 rectangular grid of garden plots, as shown below. They want to pick the dimensions $x$ and $y$ that will maximize the area $xy$ of the rectangular plot.
+
+![](../images/3by2grid.png)
+
+1. Explain why the dimensions $x$ and $y$ of the plot satisfy
+$$
+3x + 4y = 1200
+$$
+
+2. Solve the equation in part 1 for $y$, and then use this formula for $y$ to  find an equation for the area $A(x)$ that only depends upon $x$.
+
+3. Now find the critical point of $A(x)$ and show that it corresponds to a global maximum.
+
+4. Using your answer from part 3, what are the optimal dimensions for the garden, and what is its area?
+
+
 
 ### Cupcake Store
 
@@ -82,15 +126,38 @@ A cupcake store finds that at a price of \$4.00, the demand is 400 cupcakes. For
 
 Find the critical point(s) of the following functions. Then use the first derivative test to determine whether it is a local minimum, a local maximum, or neither
 
-1.  We have $f(x) = x - e^x$ and so $f'(x) = 1 - e^x$. There is one critical point: $$
+1. We have $f(x) = x^4 + 8 x^3 + 16 x^2$ and so
+$f'(x)=4x^3+24x^2+32x$. We can factor this as
+$$
+f'(x) = 4x(x^2+6x+8) = 4x(x+2)(x+4).
+$$
+There are three critical points: $x=0$ and $x=-2$ and $x=-4$. The first derivative test gives the diagram:
+
+````{verbatim}
+   -      +        -       +
+-------o-------o-------o--------
+      -4      -2       0
+
+````
+So $-4$ is a local minimum, $-2$ is a local maximum, and $0$ is a local minimum.
+
+2.  We have $g(x) = x - e^x$ and so $g'(x) = 1 - e^x$. There is one critical point: $$
     \begin{array}{rcl}
     1-e^x &=& 0 \\
     e^x &=& 1 \\
     x &=& 0.
     \end{array}
-    $$ Using the first derivative test, we have $f'(-1) = 1 - e^{-1} > 0$ and $f'(1) = 1 - e < 0$. Therefore $x=0$ is a local maximum.
+    $$ Using the first derivative test, we have $g'(-1) = 1 - e^{-1} > 0$ and $g'(1) = 1 - e < 0$. This leads to the first derivative diagram:
 
-2.  We have $g(x) = x + \sin(x)$ and therefore $g'(x) = 1 + \sin(x)$. There is one critical point: $$
+````{verbatim}
+   +       -
+-------o-------
+       0     
+````    
+    
+  Therefore $x=0$ is a local maximum.
+
+3.  We have $h(x) = x + \sin(x)$ and therefore $h'(x) = 1 + \sin(x)$. There is one critical point: $$
     \begin{array}{rcl}
     1 + \cos(x) &=& 0 \\
     \cos(x) &=& -1 \\
@@ -98,9 +165,33 @@ Find the critical point(s) of the following functions. Then use the first deriva
     \end{array}
     $$
 
-We have $g'(\pi/2) = 1 > 0$ and $g'(3 \pi/2) = 1 > 0$. (In fact, $1+\cos(x)$ is never negative) Therefore this point is not an extremum.
+We have $h'(\pi/2) = 1 > 0$ and $h'(3 \pi/2) = 1 > 0$. (In fact, $1+\cos(x)$ is never negative.) This leads to the first derivative diagram:
 
-To find all the extrema of $g(x)$, we need to consider the endpoints of $[0,2\pi]$. The function never decreases as we move from $0$ to $2\pi$.So $x=0$ is the global minimum, and $x=2\pi$ is the global maximum.
+````{verbatim}
+   +       +
+-------o-------
+      pi/2     
+````
+
+Therefore the point $x=\pi/2$ is not an extremum.
+
+To find all the extrema of $h(x)$, we need to consider the endpoints of $[0,2\pi]$. The function never decreases as we move from $0$ to $2\pi$.So $x=0$ is the global minimum, and $x=2\pi$ is the global maximum.
+
+### Visual First Derivative Test
+
+1. There are two local minima.
+
+  - The endpoint $x=0$ is a local minimum because the function increases after leaving this point.
+  - The point $x=6$ is a local minimum because the derivative changes from negative to positive at this point.
+
+2. There are two local maxima.
+
+  - The point $x=1$ is a local maximum because the derivative changes from positive to negative at this point.
+  - The endpoint $x=7$ is a local maximum because the function increases up to this point.
+
+3. The points of inflection occur at the local minima and local maxima of this derivative function $f'(x)$. These occur at the points $x=1.6$ and $x=3$ and $x=5.2$
+
+
 
 ### Second Derivative Test
 
@@ -116,6 +207,46 @@ The function $f(x) = x^4-8 x^3+22 x^2-24 x$ has critical points at $x=1$ and $x=
     $$
 
 Therefore $x=1$ and $x=3$ are local minima and $x=2$ is a local maximum.
+
+### Second Derivative Test 2
+
+Consider the function $f(x) = 2x^5 - 5x^2 + 10$.
+
+1. We have $f'(x)=10x^4 - 10x = 10x(x^3 -1)$. The critical points are $x=0$ and $x=1$.
+
+2. We have $f''(x)= 40x^3 - 10$. Considering $x=0$, we have $f''(0) = -10 < 0$, so $x=0$ is a local maximum. As for $x=1$, we have $f''(1) = 30 > 0$, so $x=1$ is a local minimum.
+
+### Fenced Garden Design
+
+1. There are 3 horizontal fences of length $x$ and $4$ vertical fences of length $y$. So the total length of the fences satisfies
+$$
+1200 = 3x + 4y.
+$$
+2. Solving the equation in part 1 for $y$ gives
+$$
+y = 300 - \frac{3}{4} x.
+$$
+Therefore the formula for the area is
+$$
+A(x) = x \left(300 - \frac{3}{4} x \right) = 300x - \frac{3}{4}x^2.
+$$
+
+3. The derivative of the area is
+$$
+A'(x) = 300 - \frac{3}{2}x.
+$$
+Setting this equal to zero and solving gives $x=200$.
+The second derivative of the area is
+$$
+A''(x) = - \frac{3}{2} < 0
+$$
+So this critical point is a local maximum by the second derivative test.
+
+4. We have $x=200$ and therefore $y=300 - 600/4 = 300-150=150.$ So the total area of the garden is
+$$
+200 \cdot 150 = 30,000 \mbox{ ft}^2
+$$
+
 
 ### Cupcake Store
 

@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -456,15 +490,21 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#characterize-the-extrema" id="toc-characterize-the-extrema" class="nav-link" data-scroll-target="#characterize-the-extrema"><span class="header-section-number">18.2.1</span> Characterize the Extrema</a></li>
   <li><a href="#first-derivative-test" id="toc-first-derivative-test" class="nav-link" data-scroll-target="#first-derivative-test"><span class="header-section-number">18.2.2</span> First Derivative Test</a></li>
-  <li><a href="#second-derivative-test" id="toc-second-derivative-test" class="nav-link" data-scroll-target="#second-derivative-test"><span class="header-section-number">18.2.3</span> Second Derivative Test</a></li>
-  <li><a href="#cupcake-store" id="toc-cupcake-store" class="nav-link" data-scroll-target="#cupcake-store"><span class="header-section-number">18.2.4</span> Cupcake Store</a></li>
+  <li><a href="#visual-first-derivative-test" id="toc-visual-first-derivative-test" class="nav-link" data-scroll-target="#visual-first-derivative-test"><span class="header-section-number">18.2.3</span> Visual First Derivative Test</a></li>
+  <li><a href="#second-derivative-test" id="toc-second-derivative-test" class="nav-link" data-scroll-target="#second-derivative-test"><span class="header-section-number">18.2.4</span> Second Derivative Test</a></li>
+  <li><a href="#second-derivative-test-2" id="toc-second-derivative-test-2" class="nav-link" data-scroll-target="#second-derivative-test-2"><span class="header-section-number">18.2.5</span> Second Derivative Test 2</a></li>
+  <li><a href="#fenced-garden-design" id="toc-fenced-garden-design" class="nav-link" data-scroll-target="#fenced-garden-design"><span class="header-section-number">18.2.6</span> Fenced Garden Design</a></li>
+  <li><a href="#cupcake-store" id="toc-cupcake-store" class="nav-link" data-scroll-target="#cupcake-store"><span class="header-section-number">18.2.7</span> Cupcake Store</a></li>
   </ul></li>
   <li><a href="#solutions" id="toc-solutions" class="nav-link" data-scroll-target="#solutions"><span class="header-section-number">18.3</span> Solutions</a>
   <ul class="collapse">
   <li><a href="#characterize-the-extrema-1" id="toc-characterize-the-extrema-1" class="nav-link" data-scroll-target="#characterize-the-extrema-1"><span class="header-section-number">18.3.1</span> Characterize the Extrema</a></li>
   <li><a href="#first-derivative-test-1" id="toc-first-derivative-test-1" class="nav-link" data-scroll-target="#first-derivative-test-1"><span class="header-section-number">18.3.2</span> First Derivative Test</a></li>
-  <li><a href="#second-derivative-test-1" id="toc-second-derivative-test-1" class="nav-link" data-scroll-target="#second-derivative-test-1"><span class="header-section-number">18.3.3</span> Second Derivative Test</a></li>
-  <li><a href="#cupcake-store-1" id="toc-cupcake-store-1" class="nav-link" data-scroll-target="#cupcake-store-1"><span class="header-section-number">18.3.4</span> Cupcake Store</a></li>
+  <li><a href="#visual-first-derivative-test-1" id="toc-visual-first-derivative-test-1" class="nav-link" data-scroll-target="#visual-first-derivative-test-1"><span class="header-section-number">18.3.3</span> Visual First Derivative Test</a></li>
+  <li><a href="#second-derivative-test-1" id="toc-second-derivative-test-1" class="nav-link" data-scroll-target="#second-derivative-test-1"><span class="header-section-number">18.3.4</span> Second Derivative Test</a></li>
+  <li><a href="#second-derivative-test-2-1" id="toc-second-derivative-test-2-1" class="nav-link" data-scroll-target="#second-derivative-test-2-1"><span class="header-section-number">18.3.5</span> Second Derivative Test 2</a></li>
+  <li><a href="#fenced-garden-design-1" id="toc-fenced-garden-design-1" class="nav-link" data-scroll-target="#fenced-garden-design-1"><span class="header-section-number">18.3.6</span> Fenced Garden Design</a></li>
+  <li><a href="#cupcake-store-1" id="toc-cupcake-store-1" class="nav-link" data-scroll-target="#cupcake-store-1"><span class="header-section-number">18.3.7</span> Cupcake Store</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -530,20 +570,61 @@ Learning goals
 <h3 data-number="18.2.2" class="anchored" data-anchor-id="first-derivative-test"><span class="header-section-number">18.2.2</span> First Derivative Test</h3>
 <p>Find the critical point(s) of the following functions. Then use the first derivative test to determine whether it is a local minimum, a local maximum, or neither</p>
 <ol type="1">
-<li><span class="math inline">\(f(x) = x - e^x\)</span></li>
-<li><span class="math inline">\(g(x) = x + \sin(x)\)</span> on <span class="math inline">\([0,2\pi]\)</span></li>
+<li><span class="math inline">\(f(x) = x^4 + 8 x^3 + 16 x^2\)</span></li>
+<li><span class="math inline">\(g(x) = x - e^x\)</span></li>
+<li><span class="math inline">\(h(x) = x + \sin(x)\)</span> on <span class="math inline">\([0,2\pi]\)</span></li>
 </ol>
 </section>
-<section id="second-derivative-test" class="level3" data-number="18.2.3">
-<h3 data-number="18.2.3" class="anchored" data-anchor-id="second-derivative-test"><span class="header-section-number">18.2.3</span> Second Derivative Test</h3>
+<section id="visual-first-derivative-test" class="level3" data-number="18.2.3">
+<h3 data-number="18.2.3" class="anchored" data-anchor-id="visual-first-derivative-test"><span class="header-section-number">18.2.3</span> Visual First Derivative Test</h3>
+<p>The graph of the derivative <span class="math inline">\(y=f'(x)\)</span> is shown below. The function is defined on the interval <span class="math inline">\([0,7]\)</span>.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="4A-Optimization1D_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Estimate the <span class="math inline">\(x\)</span> values where …</p>
+<ol type="1">
+<li><p>the original function <span class="math inline">\(f(x)\)</span> has a local minimum.</p></li>
+<li><p>the original function <span class="math inline">\(f(x)\)</span> has a local maximum.</p></li>
+<li><p>the original function <span class="math inline">\(f(x)\)</span> has a point of inflection.</p></li>
+</ol>
+</section>
+<section id="second-derivative-test" class="level3" data-number="18.2.4">
+<h3 data-number="18.2.4" class="anchored" data-anchor-id="second-derivative-test"><span class="header-section-number">18.2.4</span> Second Derivative Test</h3>
 <p>The function <span class="math inline">\(f(x) = x^4-8 x^3+22 x^2-24 x\)</span> has critical points at <span class="math inline">\(x=1\)</span> and <span class="math inline">\(x=2\)</span> and <span class="math inline">\(x=3\)</span>.</p>
 <ol type="1">
 <li>Find <span class="math inline">\(f''(x)\)</span>.</li>
 <li>Use the second derivative test to determine whether each of the critical points is a minimum or a maximum.</li>
 </ol>
 </section>
-<section id="cupcake-store" class="level3" data-number="18.2.4">
-<h3 data-number="18.2.4" class="anchored" data-anchor-id="cupcake-store"><span class="header-section-number">18.2.4</span> Cupcake Store</h3>
+<section id="second-derivative-test-2" class="level3" data-number="18.2.5">
+<h3 data-number="18.2.5" class="anchored" data-anchor-id="second-derivative-test-2"><span class="header-section-number">18.2.5</span> Second Derivative Test 2</h3>
+<p>Consider the function <span class="math inline">\(f(x) = 2x^5 - 5x^2 + 10\)</span>.</p>
+<ol type="1">
+<li><p>Calculate <span class="math inline">\(f'(x)\)</span> and then find the critical points of <span class="math inline">\(f(x)\)</span>.</p></li>
+<li><p>Calculate <span class="math inline">\(f''(x)\)</span> and then use the second derivative test to determine whether each critical point is a local maximum or a local minimum.</p></li>
+</ol>
+</section>
+<section id="fenced-garden-design" class="level3" data-number="18.2.6">
+<h3 data-number="18.2.6" class="anchored" data-anchor-id="fenced-garden-design"><span class="header-section-number">18.2.6</span> Fenced Garden Design</h3>
+<p>A gardener has 1200 feet of fencing. This fencing will be used to create a 3 by 2 rectangular grid of garden plots, as shown below. They want to pick the dimensions <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> that will maximize the area <span class="math inline">\(xy\)</span> of the rectangular plot.</p>
+<p><img src="../images/3by2grid.png" class="img-fluid"></p>
+<ol type="1">
+<li><p>Explain why the dimensions <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> of the plot satisfy <span class="math display">\[
+3x + 4y = 1200
+\]</span></p></li>
+<li><p>Solve the equation in part 1 for <span class="math inline">\(y\)</span>, and then use this formula for <span class="math inline">\(y\)</span> to find an equation for the area <span class="math inline">\(A(x)\)</span> that only depends upon <span class="math inline">\(x\)</span>.</p></li>
+<li><p>Now find the critical point of <span class="math inline">\(A(x)\)</span> and show that it corresponds to a global maximum.</p></li>
+<li><p>Using your answer from part 3, what are the optimal dimensions for the garden, and what is its area?</p></li>
+</ol>
+</section>
+<section id="cupcake-store" class="level3" data-number="18.2.7">
+<h3 data-number="18.2.7" class="anchored" data-anchor-id="cupcake-store"><span class="header-section-number">18.2.7</span> Cupcake Store</h3>
 <p>A cupcake store finds that at a price of $4.00, the demand is 400 cupcakes. For every $1 increase in price, the demand decreases by 80 cupcakes.</p>
 <ol type="1">
 <li><p>Find the formula <span class="math inline">\(r(x)\)</span> for the revenue where <span class="math inline">\(x\)</span> is the increase in price (in dollars).</p></li>
@@ -585,26 +666,65 @@ Click for Solutions
 <h3 data-number="18.3.2" class="anchored" data-anchor-id="first-derivative-test-1"><span class="header-section-number">18.3.2</span> First Derivative Test</h3>
 <p>Find the critical point(s) of the following functions. Then use the first derivative test to determine whether it is a local minimum, a local maximum, or neither</p>
 <ol type="1">
-<li><p>We have <span class="math inline">\(f(x) = x - e^x\)</span> and so <span class="math inline">\(f'(x) = 1 - e^x\)</span>. There is one critical point: <span class="math display">\[
+<li>We have <span class="math inline">\(f(x) = x^4 + 8 x^3 + 16 x^2\)</span> and so <span class="math inline">\(f'(x)=4x^3+24x^2+32x\)</span>. We can factor this as <span class="math display">\[
+f'(x) = 4x(x^2+6x+8) = 4x(x+2)(x+4).
+\]</span> There are three critical points: <span class="math inline">\(x=0\)</span> and <span class="math inline">\(x=-2\)</span> and <span class="math inline">\(x=-4\)</span>. The first derivative test gives the diagram:</li>
+</ol>
+<div class="sourceCode" id="cb1"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>   -      +        -       +</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>-------o-------o-------o--------</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>      -4      -2       0</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>So <span class="math inline">\(-4\)</span> is a local minimum, <span class="math inline">\(-2\)</span> is a local maximum, and <span class="math inline">\(0\)</span> is a local minimum.</p>
+<ol start="2" type="1">
+<li>We have <span class="math inline">\(g(x) = x - e^x\)</span> and so <span class="math inline">\(g'(x) = 1 - e^x\)</span>. There is one critical point: <span class="math display">\[
 \begin{array}{rcl}
 1-e^x &amp;=&amp; 0 \\
 e^x &amp;=&amp; 1 \\
 x &amp;=&amp; 0.
 \end{array}
-\]</span> Using the first derivative test, we have <span class="math inline">\(f'(-1) = 1 - e^{-1} &gt; 0\)</span> and <span class="math inline">\(f'(1) = 1 - e &lt; 0\)</span>. Therefore <span class="math inline">\(x=0\)</span> is a local maximum.</p></li>
-<li><p>We have <span class="math inline">\(g(x) = x + \sin(x)\)</span> and therefore <span class="math inline">\(g'(x) = 1 + \sin(x)\)</span>. There is one critical point: <span class="math display">\[
+\]</span> Using the first derivative test, we have <span class="math inline">\(g'(-1) = 1 - e^{-1} &gt; 0\)</span> and <span class="math inline">\(g'(1) = 1 - e &lt; 0\)</span>. This leads to the first derivative diagram:</li>
+</ol>
+<div class="sourceCode" id="cb2"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>   +       -</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>-------o-------</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>       0     </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Therefore <span class="math inline">\(x=0\)</span> is a local maximum.</p>
+<ol start="3" type="1">
+<li>We have <span class="math inline">\(h(x) = x + \sin(x)\)</span> and therefore <span class="math inline">\(h'(x) = 1 + \sin(x)\)</span>. There is one critical point: <span class="math display">\[
 \begin{array}{rcl}
 1 + \cos(x) &amp;=&amp; 0 \\
 \cos(x) &amp;=&amp; -1 \\
 x &amp;=&amp; \pi
 \end{array}
-\]</span></p></li>
+\]</span></li>
 </ol>
-<p>We have <span class="math inline">\(g'(\pi/2) = 1 &gt; 0\)</span> and <span class="math inline">\(g'(3 \pi/2) = 1 &gt; 0\)</span>. (In fact, <span class="math inline">\(1+\cos(x)\)</span> is never negative) Therefore this point is not an extremum.</p>
-<p>To find all the extrema of <span class="math inline">\(g(x)\)</span>, we need to consider the endpoints of <span class="math inline">\([0,2\pi]\)</span>. The function never decreases as we move from <span class="math inline">\(0\)</span> to <span class="math inline">\(2\pi\)</span>.So <span class="math inline">\(x=0\)</span> is the global minimum, and <span class="math inline">\(x=2\pi\)</span> is the global maximum.</p>
+<p>We have <span class="math inline">\(h'(\pi/2) = 1 &gt; 0\)</span> and <span class="math inline">\(h'(3 \pi/2) = 1 &gt; 0\)</span>. (In fact, <span class="math inline">\(1+\cos(x)\)</span> is never negative.) This leads to the first derivative diagram:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>   +       +</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>-------o-------</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>      pi/2     </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Therefore the point <span class="math inline">\(x=\pi/2\)</span> is not an extremum.</p>
+<p>To find all the extrema of <span class="math inline">\(h(x)\)</span>, we need to consider the endpoints of <span class="math inline">\([0,2\pi]\)</span>. The function never decreases as we move from <span class="math inline">\(0\)</span> to <span class="math inline">\(2\pi\)</span>.So <span class="math inline">\(x=0\)</span> is the global minimum, and <span class="math inline">\(x=2\pi\)</span> is the global maximum.</p>
 </section>
-<section id="second-derivative-test-1" class="level3" data-number="18.3.3">
-<h3 data-number="18.3.3" class="anchored" data-anchor-id="second-derivative-test-1"><span class="header-section-number">18.3.3</span> Second Derivative Test</h3>
+<section id="visual-first-derivative-test-1" class="level3" data-number="18.3.3">
+<h3 data-number="18.3.3" class="anchored" data-anchor-id="visual-first-derivative-test-1"><span class="header-section-number">18.3.3</span> Visual First Derivative Test</h3>
+<ol type="1">
+<li>There are two local minima.</li>
+</ol>
+<ul>
+<li>The endpoint <span class="math inline">\(x=0\)</span> is a local minimum because the function increases after leaving this point.</li>
+<li>The point <span class="math inline">\(x=6\)</span> is a local minimum because the derivative changes from negative to positive at this point.</li>
+</ul>
+<ol start="2" type="1">
+<li>There are two local maxima.</li>
+</ol>
+<ul>
+<li>The point <span class="math inline">\(x=1\)</span> is a local maximum because the derivative changes from positive to negative at this point.</li>
+<li>The endpoint <span class="math inline">\(x=7\)</span> is a local maximum because the function increases up to this point.</li>
+</ul>
+<ol start="3" type="1">
+<li>The points of inflection occur at the local minima and local maxima of this derivative function <span class="math inline">\(f'(x)\)</span>. These occur at the points <span class="math inline">\(x=1.6\)</span> and <span class="math inline">\(x=3\)</span> and <span class="math inline">\(x=5.2\)</span></li>
+</ol>
+</section>
+<section id="second-derivative-test-1" class="level3" data-number="18.3.4">
+<h3 data-number="18.3.4" class="anchored" data-anchor-id="second-derivative-test-1"><span class="header-section-number">18.3.4</span> Second Derivative Test</h3>
 <p>The function <span class="math inline">\(f(x) = x^4-8 x^3+22 x^2-24 x\)</span> has critical points at <span class="math inline">\(x=1\)</span> and <span class="math inline">\(x=2\)</span> and <span class="math inline">\(x=3\)</span>.</p>
 <ol type="1">
 <li>We have <span class="math display">\[f'(x) = 4x^3 - 24 x^2 + 44 x - 24\]</span> and <span class="math display">\[ f''(x) = 12x^2 - 48x + 44.\]</span></li>
@@ -618,8 +738,37 @@ f''(3) &amp;=&amp; 108 - 144 + 44 &gt; 0 \\
 </ol>
 <p>Therefore <span class="math inline">\(x=1\)</span> and <span class="math inline">\(x=3\)</span> are local minima and <span class="math inline">\(x=2\)</span> is a local maximum.</p>
 </section>
-<section id="cupcake-store-1" class="level3" data-number="18.3.4">
-<h3 data-number="18.3.4" class="anchored" data-anchor-id="cupcake-store-1"><span class="header-section-number">18.3.4</span> Cupcake Store</h3>
+<section id="second-derivative-test-2-1" class="level3" data-number="18.3.5">
+<h3 data-number="18.3.5" class="anchored" data-anchor-id="second-derivative-test-2-1"><span class="header-section-number">18.3.5</span> Second Derivative Test 2</h3>
+<p>Consider the function <span class="math inline">\(f(x) = 2x^5 - 5x^2 + 10\)</span>.</p>
+<ol type="1">
+<li><p>We have <span class="math inline">\(f'(x)=10x^4 - 10x = 10x(x^3 -1)\)</span>. The critical points are <span class="math inline">\(x=0\)</span> and <span class="math inline">\(x=1\)</span>.</p></li>
+<li><p>We have <span class="math inline">\(f''(x)= 40x^3 - 10\)</span>. Considering <span class="math inline">\(x=0\)</span>, we have <span class="math inline">\(f''(0) = -10 &lt; 0\)</span>, so <span class="math inline">\(x=0\)</span> is a local maximum. As for <span class="math inline">\(x=1\)</span>, we have <span class="math inline">\(f''(1) = 30 &gt; 0\)</span>, so <span class="math inline">\(x=1\)</span> is a local minimum.</p></li>
+</ol>
+</section>
+<section id="fenced-garden-design-1" class="level3" data-number="18.3.6">
+<h3 data-number="18.3.6" class="anchored" data-anchor-id="fenced-garden-design-1"><span class="header-section-number">18.3.6</span> Fenced Garden Design</h3>
+<ol type="1">
+<li><p>There are 3 horizontal fences of length <span class="math inline">\(x\)</span> and <span class="math inline">\(4\)</span> vertical fences of length <span class="math inline">\(y\)</span>. So the total length of the fences satisfies <span class="math display">\[
+1200 = 3x + 4y.
+\]</span></p></li>
+<li><p>Solving the equation in part 1 for <span class="math inline">\(y\)</span> gives <span class="math display">\[
+y = 300 - \frac{3}{4} x.
+\]</span> Therefore the formula for the area is <span class="math display">\[
+A(x) = x \left(300 - \frac{3}{4} x \right) = 300x - \frac{3}{4}x^2.
+\]</span></p></li>
+<li><p>The derivative of the area is <span class="math display">\[
+A'(x) = 300 - \frac{3}{2}x.
+\]</span> Setting this equal to zero and solving gives <span class="math inline">\(x=200\)</span>. The second derivative of the area is <span class="math display">\[
+A''(x) = - \frac{3}{2} &lt; 0
+\]</span> So this critical point is a local maximum by the second derivative test.</p></li>
+<li><p>We have <span class="math inline">\(x=200\)</span> and therefore <span class="math inline">\(y=300 - 600/4 = 300-150=150.\)</span> So the total area of the garden is <span class="math display">\[
+200 \cdot 150 = 30,000 \mbox{ ft}^2
+\]</span></p></li>
+</ol>
+</section>
+<section id="cupcake-store-1" class="level3" data-number="18.3.7">
+<h3 data-number="18.3.7" class="anchored" data-anchor-id="cupcake-store-1"><span class="header-section-number">18.3.7</span> Cupcake Store</h3>
 <p>A cupcake store finds that at a price of $4.00, the demand is 400 cupcakes. For every $1 increase in price, the demand decreases by 80 cupcakes.</p>
 <ol type="1">
 <li><p>The revenue function is <span class="math display">\[r(x) = (4+x)(400-80x) = 1600 + 80x - 80x^2.\]</span></p></li>
