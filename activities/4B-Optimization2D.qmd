@@ -3,7 +3,7 @@
 ```{r, echo=FALSE, results="hide", warning=FALSE, message=FALSE}
 # Load packages
 library(mosaic)
-library(mosaicCore)
+#library(mosaicCore)
 library(mosaicCalc)
 ```
 
@@ -236,4 +236,19 @@ $$ Setting both to zero, $$
 \end{array}
 $$ we subtract the second from the first to find that $-4t+100 = 0$ and so $t=25$. This means that $-250 - 6h +400 = 0$ which becomes $6h = 150$ and therefore $h = 25$. So the optimal conditions are $t=25$ and $h=25$.
 
+Let's check to see what type of critical point this is.
+
+```{r}
+f=makeFun(27800-5*t^2-6*h*t-3*h^2+400*t+300*h ~ t&h)
+a=25
+b=25
+r = 0.1
+theta = seq(0,2*pi,pi/10)
+f(a,b) - f(a+r*cos(theta), b+r*sin(theta)) 
+```
+This is a local maximum.
 </details>
+
+
+
+
