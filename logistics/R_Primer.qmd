@@ -1,4 +1,4 @@
-# R Studio Orientation  {.unnumbered}
+# R Studio Orientation {.unnumbered}
 
 ```{r, include=FALSE, warning=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -60,7 +60,7 @@ RStudio is open source, which means many people write packages to augment what i
 -   mosaic, mosaicCore, mosaicData: these contain the specific built-ins which create and plot functions for us. By checking the box by them, we import their functions into the session. Easy enough.
 -   mosaicCalc: Some of the function commands from the mosaic family of packages don't interact well with the built in derivative and antiderivative functions in RStudio. mosaicCalc fixes this
     -   If you don't see mosaicCalc, then you need to download it. Run the following line of code in your console: `install.packages("mosaicCalc")` Once you do this, make sure that the mosaicCal box is checked in the packages list
-
+- tinytex: this package allows you to create PDF documents from your RMarkdown files. To make sure that tinytex in installed, run the following line of code in your console: `tinytex::install_tinytex()`
 ## RMarkdown
 
 In AMC1, we'll be working with code a lot: writing it, running it, analyzing it, and commenting on it. We'll also be going back to code we've already used and tweaking it to solve new but related questions. For all of these reasons, we're going to use RMarkdown notebooks. The notebook will run large chunks of code at a time and show the output right next to the code. It's also easier for you to comment on the code you've written and go back to it later.

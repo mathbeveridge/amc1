@@ -182,6 +182,7 @@ slice_plot(P(t) ~ t, domain(t=0:50), color='orange')
 
 ```
 
+````{=html}
 <!--
 ### Fitting a Function to Data
 
@@ -285,6 +286,7 @@ gf_point(temp ~ month, data=utilitydata) %>%
 
 That looks much better!
 -->
+````
 
 ### Plotting Surfaces in 3D
 
@@ -306,7 +308,7 @@ contour_plot(f(x,y) ~ x&y, domain(x=-2:2, y=-2:2), skip=0)
 
 ```
 
-You can add more contours using the `levels` parameter, and turn off the shading with the `filled` parameter.
+You can add more contours using the `contours_at` parameter, and turn off the shading with the `filled` parameter.
 
 ```{r}
 contour_plot(f(x,y) ~ x&y, domain(x=-2:2, y=-2:2), contours_at = seq(-3 ,3, .5))
@@ -371,6 +373,26 @@ d
 ```
 
 We conclude that $g_y(2,7) \approx 5.610.$
+
+### Classifying 2D Critical Points
+
+Once you've identified a critical point (where both $f_x = 0$ and $f_y=0$), you need to determine whether it is a local maximum, a local minimum, or a saddle point.
+
+For example, here is code to check the critical point $(2,-1)$ of the function $f(x,y)=x^2 + 2y^4 + 4xy$. We compare the value of the function at $(2,-1)$ with the values of the function at points on a small circle around the critical point.
+
+```{r}
+f = makeFun(x^2 + 2*y^4 + 4*x*y ~ x&y)
+a=2
+b=-1
+
+r = 0.1
+theta = seq(0,2*pi,pi/10)
+f(a,b) - f(a+r*cos(theta), b+r*sin(theta)) 
+```
+
+All of these values are *negative*, which means that $(2,-1)$ is a local minimum.
+
+In general: - If all values are positive, then $(a,b)$ is a local maximum of $f(x,y)$. - If all values are negative, then $(a,b)$ is a local minimum of $f(x,y)$. - If the values are *both* positive and negative, then $(a,b)$ is a saddle point of $f(x,y)$.
 
 ### Gradient Search
 
@@ -463,7 +485,7 @@ $$
 
 The define integral $\int_{a}^b f(x) dx$ is the signed area between the curve $y=f(x)$ and the $x$-axis. We approximate this area by partitioning the interval $[a,b]$ into smaller intervals of width $\triangle x$ and then summing the areas $f(x) \triangle x$ of the corresponding rectangles.
 
-Here is code that makes this approximation for the function $f(x) = x + \sin(x^2)$ over the interval $[5,10]$. The code splits this interval into 100 subintervals. You can get a better approximation by increasing the denominator of `base=(b-a)/100` to a much larger number, for example: `base=(b-a)/1000000`.
+Here is code for a Right Endpoint approximation for the function $f(x) = x + \sin(x^2)$ over the interval $[5,10]$. The code splits this interval into 100 subintervals. You can get a better approximation by increasing the denominator of `base=(b-a)/100` to a much larger number, for example: `base=(b-a)/1000000`.
 
 ```{r}
 f=makeFun(x + sin(x^2)~x)
@@ -471,6 +493,19 @@ a=5
 b=10
 base=(b-a)/100
 points=seq(from=a+base, to=b, by=base)
+heights=f(points)
+areas=base*heights
+sum(areas)
+```
+
+And here is code for a Left Endpoint approximation of the same function.
+
+```{r}
+f=makeFun(x + sin(x^2)~x)
+a=5
+b=10
+base=(b-a)/100
+points=seq(from=a, to=b-base, by=base)
 heights=f(points)
 areas=base*heights
 sum(areas)

@@ -827,6 +827,22 @@ f_h(t,h) &amp;=&amp; -6t-6h+300
 -6t-6h+300 &amp;=&amp; 0
 \end{array}
 \]</span> we subtract the second from the first to find that <span class="math inline">\(-4t+100 = 0\)</span> and so <span class="math inline">\(t=25\)</span>. This means that <span class="math inline">\(-250 - 6h +400 = 0\)</span> which becomes <span class="math inline">\(6h = 150\)</span> and therefore <span class="math inline">\(h = 25\)</span>. So the optimal conditions are <span class="math inline">\(t=25\)</span> and <span class="math inline">\(h=25\)</span>.</p>
+<p>Let’s check to see what type of critical point this is.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>f<span class="ot">=</span><span class="fu">makeFun</span>(<span class="dv">27800-5</span><span class="sc">*</span>t<span class="sc">^</span><span class="dv">2-6</span><span class="sc">*</span>h<span class="sc">*</span>t<span class="dv">-3</span><span class="sc">*</span>h<span class="sc">^</span><span class="dv">2</span><span class="sc">+</span><span class="dv">400</span><span class="sc">*</span>t<span class="sc">+</span><span class="dv">300</span><span class="sc">*</span>h <span class="sc">~</span> t<span class="sc">&amp;</span>h)</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>a<span class="ot">=</span><span class="dv">25</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>b<span class="ot">=</span><span class="dv">25</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>r <span class="ot">=</span> <span class="fl">0.1</span></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>theta <span class="ot">=</span> <span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">2</span><span class="sc">*</span>pi,pi<span class="sc">/</span><span class="dv">10</span>)</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a><span class="fu">f</span>(a,b) <span class="sc">-</span> <span class="fu">f</span>(a<span class="sc">+</span>r<span class="sc">*</span><span class="fu">cos</span>(theta), b<span class="sc">+</span>r<span class="sc">*</span><span class="fu">sin</span>(theta)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] 0.050000000 0.065723728 0.071621865 0.065441526 0.049543388 0.030000000
+ [7] 0.014276272 0.008378135 0.014558474 0.030456612 0.050000000 0.065723728
+[13] 0.071621865 0.065441526 0.049543388 0.030000000 0.014276272 0.008378135
+[19] 0.014558474 0.030456612 0.050000000</code></pre>
+</div>
+</div>
+This is a local maximum.
 </section></details>
 
 
