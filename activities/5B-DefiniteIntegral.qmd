@@ -10,7 +10,12 @@ library(mosaicCalc)
 ## Rundown
 
 ::: {.callout-note title="Learning goals"}
--   Coming Soon
+-   Calculate or estimate a definite integral using a sum of signed areas.
+-   Interpret a definite integral of a rate of change as the total accumulated change.
+-   Find the change in distance (or displacement) using a velocity versus time graph.
+-   Find the change in velocity using an acceleration versus time graph.
+-   Find the total cost by finding the definite integral of a marginal cost function.
+-   Find the area between two curves.
 :::
 
 ## Approximating the Derivative
