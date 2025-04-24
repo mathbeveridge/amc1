@@ -1,7 +1,5 @@
 # Slope Fields
 
-
-
 ```{r, echo=FALSE, results="hide", warning=FALSE, message=FALSE}
 # Load packages
 library(mosaic)
@@ -12,9 +10,10 @@ library(mosaicCalc)
 ## Rundown
 
 ::: {.callout-note title="Learning goals"}
-
-- Coming Soon
-
+-   Explain what a slope field is.
+-   Draw trajectories on a slope field and describe the dynamics of those solution curves.
+-   Use a slope field to determine the long-term behavior of a solution curve.
+-   Match a slope field to its differential equation.
 :::
 
 ### Creating a Slope Field in RStudio
@@ -67,17 +66,13 @@ Match each of the following differential equations with its slope field. *Hint:*
 3.  $\displaystyle{\frac{dy}{dx}=x+y}$
 4.  $\displaystyle{\frac{dy}{dx}=x-y}$
 
-+-------------------------------------------+-------------------------------------------+
-| Slope Field A                             | Slope Field B                             |
-+-------------------------------------------+-------------------------------------------+
+|  |  |
+|------------------------------------|------------------------------------|
+| Slope Field A | Slope Field B |
 | \![\](images/slopefield1.png){width=100%} | \![\](images/slopefield2.png){width=100%} |
-+-------------------------------------------+-------------------------------------------+
-|                                           |                                           |
-+-------------------------------------------+-------------------------------------------+
-| Slope Field C                             | Slope Field D                             |
-+-------------------------------------------+-------------------------------------------+
+|  |  |
+| Slope Field C | Slope Field D |
 | \![\](images/slopefield3.png){width=100%} | \![\](images/slopefield4.png){width=100%} |
-+-------------------------------------------+-------------------------------------------+
 
 ### Draw Some Trajectories
 
@@ -138,8 +133,6 @@ Now create trajectories for the population models in the previous exercise. Crea
 
 <summary>Click for Solutions</summary>
 
-
-
 ### Match the Slope Fields
 
 1.  $\displaystyle{\frac{dy}{dx}=xy}$ is Slope Field B
@@ -151,17 +144,13 @@ Now create trajectories for the population models in the previous exercise. Crea
 
 Here are some trajectories (not necessarily the ones that go through the three points specified).
 
-+-----------------------------------------------+-----------------------------------------------+
-| Slope Field A                                 | Slope Field B                                 |
-+-----------------------------------------------+-----------------------------------------------+
+|  |  |
+|------------------------------------|------------------------------------|
+| Slope Field A | Slope Field B |
 | \![\](images/slopefield1soln.png){width=100%} | \![\](images/slopefield2soln.png){width=100%} |
-+-----------------------------------------------+-----------------------------------------------+
-|                                               |                                               |
-+-----------------------------------------------+-----------------------------------------------+
-| Slope Field C                                 | Slope Field D                                 |
-+-----------------------------------------------+-----------------------------------------------+
+|  |  |
+| Slope Field C | Slope Field D |
 | \![\](images/slopefield3soln.png){width=100%} | \![\](images/slopefield4soln.png){width=100%} |
-+-----------------------------------------------+-----------------------------------------------+
 
 ### Removing a Pollutant
 
@@ -284,4 +273,3 @@ traj_plot(P(t) ~ t, soln1,  nt=0) %>%
 ```
 
 </details>
-

@@ -10,9 +10,14 @@ library(mosaicCalc)
 ## Rundown
 
 ::: {.callout-note title="Learning goals"}
-
-- Coming Soon
-
+-   Describe the Susceptible-Infected-Removed model for the spread of disease.
+-   Explain the various terms in the differential equations of the SIR model.
+-   Define the infection rate $a$ and the removal rate $b$.
+-   Create an SIR slope field using RStudio, and interpret what I see.
+-   Create an SIR trajectory plot using RStudio, and interpret what I see.
+-   Explain what the epidemic phase of a disease outbreak is
+-   Identify the threshold population by looking at an SIR slope field, looking at an SIR trajectory, or calculating $b/a$ in the SIR differential equations
+-   Describe the effect of various actions to mitigate the spread of disease, and how that changes the SIR Model.
 :::
 
 ### The SIR Model for the Spread of Disease
@@ -143,8 +148,6 @@ What are some strategies for getting out of epidemic phase? What effect do these
 <details>
 
 <summary>Click for Solutions</summary>
-
-
 
 ### Threshold Population for an SIR Model
 

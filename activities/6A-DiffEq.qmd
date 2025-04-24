@@ -10,9 +10,12 @@ library(mosaicCalc)
 ## Rundown
 
 ::: {.callout-note title="Learning goals"}
-
-- Coming Soon
-
+-   Recognize a differential equation.
+-   Test whether a given function is a solution to a given differential equation.
+-   Solve a simple differential equation of the form $\frac{dy}{dx} = f(x)$ using antiderivatives.
+-   Explain why a differential equation has an infinite family of solutions.
+-   Use an initial condition to turn a general solution into the unique solution to the differential equation.
+-   Create a differential equation to model a written description of the rate of change.
 :::
 
 ## Activities
@@ -23,7 +26,7 @@ Each scenario describes a system that changes over time. Write a differential eq
 
 1.  A population $P$ grows at a rate proportional to the size of the population.
 2.  Dead leaves $L$ accumulate on the ground at a rate of 3 grams per square centimeter per year. At the same time, the leaves decompose at a continuous rate of 75% per year.
-3.  The principal $P$ of a home mortgage increases at 5% a year and the annual payment is \$10000.
+3.  The principal $P$ of a home mortgage increases at a continuous rate of 5% a year and decreases by the annual payment of \$10000.
 4.  Bacteria grow proportionally to the product of the current population $N$ and the difference between the carrying capacity $M$ and the current population $N$.
 
 ### Solve the Differential Equation
@@ -56,8 +59,6 @@ $$
 <details>
 
 <summary>Click for Solutions</summary>
-
-
 
 ### Building Differential Equations
 

@@ -10,9 +10,9 @@ library(mosaicCalc)
 ## Rundown
 
 ::: {.callout-note title="Learning goals"}
-
-- Coming Soon
-
+-   Explain what Euler's Method is, and why we must use numerical approximation to solve many differential equations.
+-   Manually perform a few steps of Euler's Method.
+-   Use RStudio to find an Euler's Method solution to a differential equation with initial conditions.
 :::
 
 ### Euler's Method
@@ -133,8 +133,6 @@ $$
 <details>
 
 <summary>Click for Solutions</summary>
-
-
 
 ### Euler's Method for Two Steps
 

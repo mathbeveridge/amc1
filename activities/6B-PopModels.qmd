@@ -10,9 +10,11 @@ library(mosaicCalc)
 ## Rundown
 
 ::: {.callout-note title="Learning goals"}
-
-- Coming Soon
-
+-   Solve the differential equation $\frac{dP}{dt} = rP$ using $P(t)=Ce^{rt}$.
+-   Solve the differential equation $\frac{dP}{dt} = r(P-A)$ using $P(t)=A+Ce^{rt}$.
+-   Solve the differential equation $\frac{dP}{dt} = rP\left( 1- \frac{P}{K}\right)$ using the logistic function $P(t)=\frac{K}{1+Ce^{-rt}}$.
+-   Find the constant $C$ in each of the above functions using an initial condition.
+-   Solve a problem using Newton's Law of Heating and Cooling.
 :::
 
 ### Important Models
@@ -91,8 +93,6 @@ $$
 <details>
 
 <summary>Click for Solutions</summary>
-
-
 
 ### Drug Metabolization
 
