@@ -76,7 +76,7 @@ gf_point(xlist ~ tlist) + xlab("t") + ylab("x(t)")
 
 ### Euler's Method for Two Steps
 
-For each of the following problems, perform TWO steps of Euler's Method for the given differential equation \$\frac{dx}{dt}, initial conditions and step size $\triangle t$.
+For each of the following problems, perform TWO steps of Euler's Method for the given differential equation, initial conditions and step size $\triangle t$.
 
 1.  Differential equation $\displaystyle{\frac{dx}{dt} = x^2}$, initial conditions $t_0=1$ and $x_0= 3$ and step size $\triangle t=1$.
 2.  Differential equation $\displaystyle{\frac{dx}{dt} = t^2}$, initial conditions $t_0=1$ and $x_0= 3$ and step size $\triangle t=0.5$.
@@ -84,7 +84,11 @@ For each of the following problems, perform TWO steps of Euler's Method for the 
 
 ### Calculating an Euler Approximation
 
-Use Euler's Method to approximate the value $x(4)$ where $x(t)$ satisfies the differential equation \[ \frac{dx}{dt}=2x -6, \quad \mbox{where} \quad   x(0)=4 \] by using times $t_0=0$, $t_1=0.5$, $t_2=1.0$ and $t_3 = 1.5$. Here is a table to get you started. $$
+Use Euler's Method to approximate the value $x(4)$ where $x(t)$ satisfies the differential equation 
+$$
+\frac{dx}{dt}=2x -6, \quad \mbox{where} \quad   x(0)=4$$ 
+by using times $t_0=0$, $t_1=0.5$, $t_2=1.0$ and $t_3 = 1.5$. Here is a table to get you started. 
+$$
 \begin{array}{c|c|c|c|c}
 n & t_n & x_n & x'(t_n) & x_{n} + x'(t_{n}) (t_{n+1} - t_{n}) \\ 
 &&& = 2x_n - 6  & = x_{n} + x'(t_{n}) \cdot 0.5  \\
