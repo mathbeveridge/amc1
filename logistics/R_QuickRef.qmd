@@ -5,7 +5,7 @@
 Run the following code block to load the `mosaic`, `mosaicCore` and `mosaicCalc` libraries
 
 ```{r, warning=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 suppressPackageStartupMessages(library(mosaic))
 suppressPackageStartupMessages(library(mosaicCore))
 suppressPackageStartupMessages(library(mosaicCalc))
@@ -648,7 +648,6 @@ traj_plot(P(t) ~ t, soln1, color='blue',  nt=numtick) %>%
   traj_plot(P(t) ~ t, soln2, color='magenta',  nt=numtick) %>%
   traj_plot(P(t) ~ t, soln3, color='orange',  nt=numtick) %>%
   vectorfield_plot(t ~ tscaled, P ~ dPdt(P) , domain(t=tmin:tmax, P=Pmin:Pmax))
-
 ```
 
 ### SIR Model

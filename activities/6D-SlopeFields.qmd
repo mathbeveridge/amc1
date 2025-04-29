@@ -2,6 +2,7 @@
 
 ```{r, echo=FALSE, results="hide", warning=FALSE, message=FALSE}
 # Load packages
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 library(mosaic)
 library(mosaicCore)
 library(mosaicCalc)
@@ -48,7 +49,7 @@ The `mosaicCalc` package also has a `traj_plot` function that plots a solution c
 
 Here is the code to plot the trajectory starting at $P(0)=6$ for the differential equation $\displaystyle{\frac{dP}{dt} = 6 - 2 P}$. In the code below, the `nt` parameter indicated the number of "tick marks" to use along the trajectory.
 
-```{r, message=FALSE}
+```{r, warning=FALSE, message=FALSE}
 dPdt = makeFun(6 - 2 * P ~ P)
 Pstart = 6
 tmin = 0
@@ -62,7 +63,7 @@ traj_plot(P(t) ~ t, soln,  nt=numtick)
 
 Here is code that plots multiple trajectories, each for a different initial value of $P$. We set `numtick=0` so that we don't have any tick marks.
 
-```{r}
+```{r warning=FALSE, message=FALSE}
 dPdt = makeFun(6 - 2 * P ~ P)
 tmin = 0
 tmax = 5
@@ -81,7 +82,7 @@ traj_plot(P(t) ~ t, soln1, color='blue',  nt=numtick) %>%
 
 In fact, we can get fancier by making a single plot that has a trajectory for $P(0)=6$ along with the vector field.
 
-```{r}
+```{r warning=FALSE, message=FALSE}
 dPdt = makeFun(6 - 2 * P ~ P)
 Pstart = 6
 tmin = 0
@@ -97,6 +98,27 @@ traj_plot(P(t) ~ t, soln, color="blue", nt=numtick) %>%
   vectorfield_plot(t ~ tscaled, P ~ dPdt(P) , domain(t=tmin:tmax, P=Pmin:Pmax))
 ```
 
+Want to plot three trajectories and the vector field as well? Sure, why not?
+
+
+```{r warning=FALSE, message=FALSE}
+dPdt = makeFun(6 - 2 * P ~ P)
+tmin = 0
+tmax = 5
+Pmin = 0
+Pmax = 12
+numtick = 0
+#################
+dyn = makeODE( dP ~  dPdt(P) )
+soln1 = integrateODE(dyn, domain(t=tmin:tmax), P=12)
+soln2 = integrateODE(dyn, domain(t=tmin:tmax), P=9)
+soln3 = integrateODE(dyn, domain(t=tmin:tmax), P=6)
+tscaled = (Pmax-Pmin)/(tmax-tmin)
+traj_plot(P(t) ~ t, soln1, color='blue',  nt=numtick) %>%
+  traj_plot(P(t) ~ t, soln2, color='magenta',  nt=numtick) %>%
+  traj_plot(P(t) ~ t, soln3, color='orange',  nt=numtick) %>%
+  vectorfield_plot(t ~ tscaled, P ~ dPdt(P) , domain(t=tmin:tmax, P=Pmin:Pmax))
+```
 
 ## Activities
 
@@ -112,10 +134,10 @@ Match each of the following differential equations with its slope field. *Hint:*
 |  |  |
 |------------------------------------|------------------------------------|
 | Slope Field A | Slope Field B |
-| \![\](images/slopefield1.png){width=100%} | \![\](images/slopefield2.png){width=100%} |
+| ![](images/slopefield1.png){width=100%} | ![](images/slopefield2.png){width=100%} |
 |  |  |
 | Slope Field C | Slope Field D |
-| \![\](images/slopefield3.png){width=100%} | \![\](images/slopefield4.png){width=100%} |
+| ![](images/slopefield3.png){width=100%} | ![](images/slopefield4.png){width=100%} |
 
 ### Draw Some Trajectories
 
@@ -130,7 +152,7 @@ For each of the above slope fields, sketch the solution curves that satisfy
 A pollutant spilled on the ground decays at a rate of 4% a day. In addition, cleanup crews remove the pollutant at a rate of 20 gallons a day.
 
 1.  Write a differential equation for the amount of pollutant $P$, in gallons, left after $t$ days.
-2.  The initial amount of pollutant is 2000 gallons. Use the `plot_traj` command to create a trajectory for $0 \leq t \leq 50$. Set `nt=10` to show 10 tick marks on your trajectory.
+2.  The initial amount of pollutant is 2000 gallons. Use the `plot_traj` command to create a trajectory for $0 \leq t \leq 50$. Set `numtick=10` to show 10 tick marks on your trajectory.
 3.  Use the trajectory to estimate long it takes to clean up the pollutant. In other words, when is $P(t)=0$?
 
 ### Slope Fields for Population Models
