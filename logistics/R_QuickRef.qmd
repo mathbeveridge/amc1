@@ -557,12 +557,21 @@ The `mosaicCalc` package has a `vectorfield_plot` function that we use to create
 suppressPackageStartupMessages(library(mosaicCalc))
 ```
 
-Here is the code to create the slope field for $\displaystyle{\frac{dP}{dt} = 5 - 2 P}$
+Here is the code to create the slope field for 
+$$
+\frac{dP}{dt} = 6 - 2 P
+$$
 
 ```{r}
-vectorfield_plot(t ~ 1,
-P ~ 6 - 2 * P,
-domain(t=-8:8, P=-8:8))
+dPdt = makeFun(6 - 2*P ~ P)
+tmin = 0
+tmax = 4
+Pmin = 0
+Pmax = 8
+###########
+tscaled = (Pmax-Pmin)/(tmax-tmin)
+vectorfield_plot(t ~ tscaled, P ~ dPdt(P),
+  domain(t=tmin:tmax, P=Pmin:Pmax))
 ```
 
 ### Creating a Trajectory in RStudio
@@ -572,20 +581,74 @@ The `mosaicCalc` package also has a `traj_plot` function that plots a solution c
 Here is the code to plot the trajectory starting at $P(0)=6$ for the differential equation $\displaystyle{\frac{dP}{dt} = 6 - 2 P}$. In the code below, the `nt` parameter indicated the number of "tick marks" to use along the trajectory.
 
 ```{r, message=FALSE}
-dyn = makeODE( dP ~  6 - 2 * P )
-soln = integrateODE(dyn, domain(t=0:5), P=6)
-traj_plot(P(t) ~ t, soln,  nt=5) 
+dPdt = makeFun(6 - 2 * P ~ P)
+Pstart = 6
+tmin = 0
+tmax = 5
+numtick = 5
+#################
+dyn = makeODE( dP ~  dPdt(P) )
+soln = integrateODE(dyn, domain(t=tmin:tmax), P=Pstart)
+traj_plot(P(t) ~ t, soln,  nt=numtick) 
 ```
 
-In fact, we can get fancier by making a single plot that has two trajectories (one for $P(0)=6$ and one for $P(0)=2$) along with the vector field.
+In fact, we can get fancier by making a single plot that has a trajectory for $P(0)=6$  along with the vector field.
 
 ```{r, message=FALSE}
-dyn = makeODE( dP ~  6 - 2 * P )
-soln1 = integrateODE(dyn, domain(t=0:5), P=6)
-soln2 = integrateODE(dyn, domain(t=0:5), P=2)
-traj_plot(P(t) ~ t, soln1, color="blue", nt=5) %>%
-  traj_plot(P(t) ~ t, soln2, color="magenta", nt=5) %>%
-  vectorfield_plot(t ~ 1, P ~ 6 - 2 * P, domain(t=0:5, P=0:8))
+dPdt = makeFun(6 - 2 * P ~ P)
+Pstart = 6
+tmin = 0
+tmax = 5
+Pmin = 0
+Pmax = 8
+numtick = 0
+############################
+dyn = makeODE( dP ~  dPdt(P) )
+soln = integrateODE(dyn, domain(t=tmin:tmax), P=Pstart)
+tscaled = (Pmax-Pmin)/(tmax-tmin)
+traj_plot(P(t) ~ t, soln, color="blue", nt=numtick) %>%
+  vectorfield_plot(t ~ tscaled, P ~ dPdt(P) , domain(t=tmin:tmax, P=Pmin:Pmax))
+```
+
+Finally, we can also plot multiple trajectories.
+Here is code that plots multiple trajectories, each for a different initial value of $P$. We set `numtick=0` so that we don't have any tick marks.
+
+```{r}
+dPdt = makeFun(6 - 2 * P ~ P)
+tmin = 0
+tmax = 5
+numtick = 0
+#################
+dyn = makeODE( dP ~  dPdt(P) )
+soln1 = integrateODE(dyn, domain(t=tmin:tmax), P=12)
+soln2 = integrateODE(dyn, domain(t=tmin:tmax), P=9)
+soln3 = integrateODE(dyn, domain(t=tmin:tmax), P=6)
+traj_plot(P(t) ~ t, soln1, color='blue',  nt=numtick) %>%
+  traj_plot(P(t) ~ t, soln2, color='magenta',  nt=numtick) %>%
+  traj_plot(P(t) ~ t, soln3, color='orange',  nt=numtick)
+
+```
+Want to add the vector field as well? Sure, why not?
+
+
+```{r}
+dPdt = makeFun(6 - 2 * P ~ P)
+tmin = 0
+tmax = 5
+Pmin = 0
+Pmax = 12
+numtick = 0
+#################
+dyn = makeODE( dP ~  dPdt(P) )
+soln1 = integrateODE(dyn, domain(t=tmin:tmax), P=12)
+soln2 = integrateODE(dyn, domain(t=tmin:tmax), P=9)
+soln3 = integrateODE(dyn, domain(t=tmin:tmax), P=6)
+tscaled = (Pmax-Pmin)/(tmax-tmin)
+traj_plot(P(t) ~ t, soln1, color='blue',  nt=numtick) %>%
+  traj_plot(P(t) ~ t, soln2, color='magenta',  nt=numtick) %>%
+  traj_plot(P(t) ~ t, soln3, color='orange',  nt=numtick) %>%
+  vectorfield_plot(t ~ tscaled, P ~ dPdt(P) , domain(t=tmin:tmax, P=Pmin:Pmax))
+
 ```
 
 ### SIR Model
