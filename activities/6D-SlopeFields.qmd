@@ -152,7 +152,7 @@ For each of the above slope fields, sketch the solution curves that satisfy
 A pollutant spilled on the ground decays at a rate of 4% a day. In addition, cleanup crews remove the pollutant at a rate of 20 gallons a day.
 
 1.  Write a differential equation for the amount of pollutant $P$, in gallons, left after $t$ days.
-2.  The initial amount of pollutant is 2000 gallons. Use the `plot_traj` command to create a trajectory for $0 \leq t \leq 50$. Set `numtick=10` to show 10 tick marks on your trajectory.
+2.  The initial amount of pollutant is 2000 gallons. Use the `traj_plot` command to create a trajectory for $0 \leq t \leq 50$. Set `numtick=10` to show 10 tick marks on your trajectory.
 3.  Use the trajectory to estimate long it takes to clean up the pollutant. In other words, when is $P(t)=0$?
 
 ### Slope Fields for Population Models
