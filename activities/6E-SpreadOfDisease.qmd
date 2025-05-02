@@ -132,7 +132,7 @@ What are some strategies for getting out of epidemic phase? What effect do these
     \frac{dS}{dt} = -0.0005 SI \qquad  \frac{dS}{dt} = 0.0005 SI -0.2 I 
     $$ and starting at $S=600$ and $I=8$. Plot this trajectory. How large is the peak infected population? When does it occur? How many uninfected people are there at the end of the outbreak? How long does the outbreak last?
 
-3.  Now let's change the original model by doubling the removal time: $$
+3.  Now let's change the original model by doubling the removal rate: $$
     \frac{dS}{dt} = -0.001 SI \qquad  \frac{dS}{dt} = 0.001 SI -0.4 I 
     $$ and starting at $S=600$ and $I=8$. Plot this trajectory. How large is the peak infected population? When does it occur? How many uninfected people are there at the end of the outbreak? How long does the outbreak last?
 
@@ -228,7 +228,7 @@ Soln = integrateODE(SIRdyn, domain(t=0:100), S=600, I=8)
 traj_plot(I(t) ~ S(t), Soln, nt=20)
 ```
 
-3.  When the removal time is doubled, the peak infected population is 46, and this occurs at $t=14.5$. There are 235 susceptible people at the end of the outbreak, which lasts 50 days.
+3.  When the removal rate is doubled, the peak infected population is 46, and this occurs at $t=14.5$. There are 235 susceptible people at the end of the outbreak, which lasts 50 days.
 
 ```{r, out.width="70%"}
 SIRdyn = makeODE(dS ~ - 0.001*S*I, 

@@ -682,7 +682,7 @@ S = \frac{b}{a}.
 <li><p>Now let’s change the model to be half as infectious: <span class="math display">\[
 \frac{dS}{dt} = -0.0005 SI \qquad  \frac{dS}{dt} = 0.0005 SI -0.2 I
 \]</span> and starting at <span class="math inline">\(S=600\)</span> and <span class="math inline">\(I=8\)</span>. Plot this trajectory. How large is the peak infected population? When does it occur? How many uninfected people are there at the end of the outbreak? How long does the outbreak last?</p></li>
-<li><p>Now let’s change the original model by doubling the removal time: <span class="math display">\[
+<li><p>Now let’s change the original model by doubling the removal rate: <span class="math display">\[
 \frac{dS}{dt} = -0.001 SI \qquad  \frac{dS}{dt} = 0.001 SI -0.4 I
 \]</span> and starting at <span class="math inline">\(S=600\)</span> and <span class="math inline">\(I=8\)</span>. Plot this trajectory. How large is the peak infected population? When does it occur? How many uninfected people are there at the end of the outbreak? How long does the outbreak last?</p></li>
 <li><p>Compare your answers to part 2 and part 3. What do you notice?</p></li>
@@ -829,7 +829,7 @@ Click for Solutions
 </div>
 </div>
 <ol start="3" type="1">
-<li>When the removal time is doubled, the peak infected population is 46, and this occurs at <span class="math inline">\(t=14.5\)</span>. There are 235 susceptible people at the end of the outbreak, which lasts 50 days.</li>
+<li>When the removal rate is doubled, the peak infected population is 46, and this occurs at <span class="math inline">\(t=14.5\)</span>. There are 235 susceptible people at the end of the outbreak, which lasts 50 days.</li>
 </ol>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>SIRdyn <span class="ot">=</span> <span class="fu">makeODE</span>(dS <span class="sc">~</span> <span class="sc">-</span> <span class="fl">0.001</span><span class="sc">*</span>S<span class="sc">*</span>I, </span>
