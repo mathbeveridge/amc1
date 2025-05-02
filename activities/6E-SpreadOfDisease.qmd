@@ -99,9 +99,14 @@ vectorfield_plot(S ~ - 0.002*S*I,
 
 ### Ending an Outbreak Before Everyone Gets Sick
 
-A disease is spreading according to the SIR Model $$
+A disease is spreading according to the SIR Model 
+$$
 \frac{dS}{dt} = -0.001 SI \qquad  \frac{dS}{dt} = 0.001 SI -0.2 I 
-$$ 1. Use `traj_plot` to create the SI trajectory for initial conditions $S=600$ and $I=8$. Start with $0 \leq t \leq 100.$ 2. How long does the outbreak last? Answer this question by lowering the upper bound on $t$ to find the first time where $I=0$. 3. Now increase the removal rate $b=0.2$ to find the smallest value of $b$ such that when the outbreak is over, there are at least 200 susceptible people who never became infected. Your answer should be correct up to two decimal places.
+$$ 
+1. Use `traj_plot` to create the SI trajectory for initial conditions $S=600$ and $I=8$. Start with $0 \leq t \leq 100.$ 
+2. How long does the outbreak last? Answer this question by lowering the upper bound on $t$ to find the first time where $I=0$. 
+
+3. Now increase the removal rate $b=0.2$ to find the smallest value of $b$ such that when the outbreak is over, there are at least 200 susceptible people who never became infected. Your answer should be correct up to two decimal places.
 
 ````{=html}
 <!--
